@@ -1,0 +1,151 @@
+@import '../../sass/variables';
+@import '../../sass/_responsive';
+.header {
+	position: relative;
+	&__logo-svg {
+		padding: 3rem;
+		position: relative;
+		.logo {
+			display: block;
+			z-index: 1;
+			font-family: $font-bebas;
+			a {
+				text-decoration: none;
+				font-weight: 500;
+				color: #fff;
+				font-size: 30px;
+			}
+			&__img {
+				width: 30rem;
+				height: 10rem;
+				@include mobile-m {
+					/*320px-375px*/
+					width: 23rem;
+				}
+			}
+		}
+		svg {
+			z-index: 3;
+			background: $color-primary;
+			border-radius: 50%;
+			height: 7rem;
+			width: 7rem;
+		}
+		.active {
+			z-index: 3;
+		}
+		.ham {
+			cursor: pointer;
+			position: fixed;
+			right: 8%;
+			top: 4%;
+			-webkit-tap-highlight-color: transparent;
+			transition: transform 400ms;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			.line {
+				fill: none;
+				transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+				stroke: #fff;
+				stroke-width: 5;
+				stroke-linecap: round;
+			}
+		}
+		.hamRotate.active {
+			transform: rotate(45deg);
+		}
+
+		.ham1 {
+			.top {
+				stroke-dasharray: 40 139;
+			}
+			.bottom {
+				stroke-dasharray: 40 180;
+			}
+		}
+		.ham1.active .top {
+			stroke-dashoffset: -98px;
+		}
+		.ham1.active .bottom {
+			stroke-dashoffset: -138px;
+		}
+	}
+	&__navigation {
+		height: 70px;
+		justify-content: space-between;
+		background: #000;
+		height: 109vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s ease-in-out;
+		z-index: 2;
+
+		.menu ul {
+			list-style: none;
+			li {
+				height: 20%;
+				// margin-top: 3.2rem;
+				// &:not(:last-child) {
+				// 	margin-bottom: 3.2rem;
+				// }
+				.active {
+					color: $color-primary;
+				}
+				a {
+					display: inline-block;
+					transition: 1.3s;
+					text-decoration: none;
+					color: #fff;
+					font-size: 10rem;
+					line-height: 13rem;
+					letter-spacing: 5px;
+					text-transform: uppercase;
+					font-weight: 500;
+					font-family: $font-bebas;
+					font-weight: 700;
+					&:hover {
+						color: $color-primary;
+					}
+					@include tablet {
+						/*768px-1024px*/
+						font-size: 8rem;
+						line-height: 9rem;
+					}
+
+					@include tablet-port {
+						/*1025px-1200px*/
+						font-size: 10rem;
+						line-height: 10rem;
+					}
+					@include mini-desktop {
+						/*1201px-1300px*/
+						font-size: 10rem;
+						line-height: 11rem;
+					}
+				}
+			}
+		}
+
+		.left {
+			padding-left: 10rem;
+			padding-top: 2rem;
+		}
+		.right {
+			// background-image: url('../images/manu-image-1.jpg');
+			height: 100%;
+			background-size: cover;
+		}
+	}
+
+	.show {
+		/* purgecss ignore current */
+		opacity: 1;
+		visibility: visible;
+	}
+}

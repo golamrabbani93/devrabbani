@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+	background-color: #000000;
+	@media (max-width: 998px) {
+		font-size: 55%;
+	}
+	@media (max-width: 768px) {
+		font-size: 45%;
+	}
+	@media (max-width: 480px) {
+		font-size: 30%;
+	}
+}
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+	text-transform: none;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

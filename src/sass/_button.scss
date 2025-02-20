@@ -1,0 +1,24 @@
+@import './_variables.scss';
+
+.custom_button {
+	&:link,
+	&:visited,
+	&:active {
+		text-decoration: none;
+		outline: none !important;
+		box-shadow: none;
+		display: inline-block;
+		text-align: center;
+		padding: 0rem 4rem;
+		font-size: 3rem;
+		background: $color-primary;
+		color: $color-white;
+		border: 0.2rem solid $color-primary;
+		transition: 0.5s ease-in-out;
+		font-family: $font-bebas;
+	}
+	&:hover {
+		// background: #fff;
+		color: rgba(0, 0, 0, 0.904);
+	}
+}

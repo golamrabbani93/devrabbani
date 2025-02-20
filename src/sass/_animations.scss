@@ -1,0 +1,121 @@
+//*Banner Dot Image Animation Start
+@keyframes react {
+	from {
+		transform: rotate(-360deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes dot {
+	0% {
+		top: 36rem;
+	}
+	25% {
+		top: 36rem;
+		left: 93rem;
+	}
+	50% {
+		top: 56rem;
+		left: 93rem;
+	}
+	75% {
+		top: 56rem;
+		left: 13rem;
+	}
+}
+@include mobile-m {
+	/*320px-375px*/
+	@keyframes dot {
+		0% {
+			top: 13rem;
+		}
+		25% {
+			top: 13rem;
+			left: 46rem;
+		}
+		50% {
+			top: 28rem;
+			left: 46rem;
+		}
+		75% {
+			top: 28rem;
+			left: 18rem;
+		}
+		// 100% {
+		// 	top: 13rem;
+		// 	left: 22rem;
+		// }
+	}
+}
+@include mobile-s {
+	/*320px-375px*/
+	@keyframes dot {
+		0% {
+			top: 13rem;
+		}
+		25% {
+			top: 13rem;
+			left: 51rem;
+		}
+		50% {
+			top: 28rem;
+			left: 51rem;
+		}
+		75% {
+			top: 28rem;
+			left: 25rem;
+		}
+		// 100% {
+		// 	top: 13rem;
+		// 	left: 22rem;
+		// }
+	}
+}
+@include mobile-l {
+	/*426px-480px*/
+	@keyframes dot {
+		0% {
+			top: 13rem;
+		}
+		25% {
+			top: 13rem;
+			left: 56rem;
+		}
+		50% {
+			top: 28rem;
+			left: 56rem;
+		}
+		75% {
+			top: 28rem;
+			left: 27rem;
+		}
+		// 100% {
+		// 	top: 13rem;
+		// 	left: 22rem;
+		// }
+	}
+}
+
+//*Banner Dot Image Animation End
+//*Banner Sub Image Animation Start
+
+@keyframes opacity {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+//*Banner Sub Image Animation End
