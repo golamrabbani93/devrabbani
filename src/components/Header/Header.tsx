@@ -2,20 +2,30 @@
 
 import {useState} from 'react';
 import './Header.scss';
+
 import Link from 'next/link';
+import Image from 'next/image';
 const Header = () => {
-	const rightImage = {backgroundImage: `url(${''})`};
+	const rightImage = {backgroundImage: `url(/images/manu-image-1.jpg)`};
 	const [hamOpen, setHamOpen] = useState(false);
 	return (
 		<header className="header">
 			<div className="container-fluid">
-				<div className="header__logo-svg d-flex justify-content-between">
+				<div className="header__logo-svg flex justify-between items-center">
 					<div className="logo">
-						<Link href={'/'}>{/* <img src={logo} className="logo__img" alt="logo" /> */}</Link>
+						<Link href="/">
+							<Image
+								src="/images/logo.png"
+								className="logo__img"
+								alt="logo"
+								width={500}
+								height={500}
+							/>
+						</Link>
 					</div>
 					<svg
 						onClick={() => setHamOpen(!hamOpen)}
-						className={`ham hamRotate ham1 ${hamOpen ? `active` : ''}`}
+						className={`ham hamRotate ham1 ${hamOpen ? 'active' : ''}`}
 						viewBox="0 0 100 100"
 					>
 						<path
@@ -30,23 +40,23 @@ const Header = () => {
 					</svg>
 				</div>
 
-				<div className={`header__navigation d-flex ${hamOpen ? `show` : ''}`} id="home">
-					<div className="col-md-6 left">
+				<div className={` header__navigation flex ${hamOpen ? 'show' : ''}`} id="home">
+					<div className="w-full md:w-1/2 flex justify-center items-center">
 						<nav className="menu text-start">
 							<ul>
 								<li>
 									<Link href="/" onClick={() => setHamOpen(!hamOpen)}>
-										home
+										Home
 									</Link>
 								</li>
 								<li>
 									<Link href="/about" onClick={() => setHamOpen(!hamOpen)}>
-										about
+										About
 									</Link>
 								</li>
 								<li>
 									<Link href="/portfolio" onClick={() => setHamOpen(!hamOpen)}>
-										PortFolio
+										Portfolio
 									</Link>
 								</li>
 								<li>
@@ -54,7 +64,6 @@ const Header = () => {
 										Blogs
 									</Link>
 								</li>
-
 								<li>
 									<Link href="/contact" onClick={() => setHamOpen(!hamOpen)}>
 										Contact
@@ -63,7 +72,7 @@ const Header = () => {
 							</ul>
 						</nav>
 					</div>
-					<div className="col-md-6 right" style={rightImage}></div>
+					<div className="w-1/2 hidden md:block" style={rightImage}></div>
 				</div>
 			</div>
 		</header>
