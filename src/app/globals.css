@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'font-nyght';
+	src: url('/font/nyght/NyghtSerif-RegularItalic.woff2') format('woff2'),
+		url('/font/nyght/NyghtSerif-RegularItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 body {
-	font-family: 'Bebas Neue', cursive;
+	font-family: Outfit, Outfit Fallback;
+}
+.font-nyght {
+	font-family: 'font-nyght';
+	font-style: italic;
+	font-weight: 300;
 }

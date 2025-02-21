@@ -1,10 +1,10 @@
 import type {Metadata} from 'next';
-import {Bebas_Neue} from 'next/font/google';
+import {Outfit} from 'next/font/google';
 import './globals.css';
 import './index.scss';
 
-const bebas = Bebas_Neue({
-	variable: '--font-bebas-neue',
+const outfit = Outfit({
+	variable: '--font-outfit',
 	subsets: ['latin'],
 	weight: '400',
 });
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${bebas.variable} antialiased`}>{children}</body>
+			<body className={`${outfit.variable} antialiased`}>{children}</body>
 		</html>
 	);
 }

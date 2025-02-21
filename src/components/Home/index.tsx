@@ -1,5 +1,11 @@
+import Banner from './components/Banner/Banner';
+
 const index = () => {
-	return <div>This Home component</div>;
+	return (
+		<>
+			<Banner />
+		</>
+	);
 };
 
 export default index;
