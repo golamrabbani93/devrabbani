@@ -58,9 +58,9 @@ const Banner = () => {
 								height="421"
 								decoding="async"
 								data-nimg="1"
-								className="mx-2 w-16 cursor-pointer rounded-3xl transition-all duration-300 hover:scale-105 md:w-20 lg:mx-3"
+								className="mx-2 w-16 cursor-pointer rounded-3xl transition-all duration-300 hover:scale-[4] md:w-20 lg:mx-3"
 								style={{color: 'transparent'}}
-								src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.a2787c7a.webp&w=1200&q=75"
+								src="/images/myphoto.png"
 							/>
 						</div>
 					</span>

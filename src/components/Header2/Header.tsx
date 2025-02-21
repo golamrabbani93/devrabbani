@@ -7,7 +7,7 @@ const Header = () => {
 	return (
 		<div className="animate-fadeInDown fixed inset-x-0 top-4 z-[5000] mx-auto mt-1.5 flex w-full max-w-7xl items-center justify-between px-6 py-1.5 pr-4 lg:top-1 lg:px-0">
 			<Link href="/" className="animate-fadeInLeft size-8 p-1 drop-shadow-xl delay-200 md:size-9">
-				<Image alt="Golam Rabbani logo" width={35} height={35} src="/GRLogo.svg" />
+				<Image alt="Golam Rabbani logo" width={35} height={35} src="/images/logo.png" />
 			</Link>
 			<div className="absolute top-1/2 left-1/2 hidden w-fit -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-blur-md lg:flex">
 				<nav
