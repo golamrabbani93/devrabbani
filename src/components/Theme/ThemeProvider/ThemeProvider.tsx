@@ -7,5 +7,11 @@ export function ThemeProvider({
 	children,
 	...props
 }: React.ComponentProps<typeof NextThemesProvider>) {
-	return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+	const [domLoaded, setDomLoaded] = React.useState(false);
+
+	React.useEffect(() => {
+		setDomLoaded(true);
+	}, []);
+
+	return <>{domLoaded && <NextThemesProvider {...props}>{children}</NextThemesProvider>}</>;
 }

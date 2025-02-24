@@ -13,6 +13,7 @@ const GLOBE_CONFIG: COBEOptions = {
 	height: 800,
 	onRender: () => {},
 	devicePixelRatio: 2,
+
 	phi: 0,
 	theta: 0.3,
 	dark: 1,
@@ -39,9 +40,11 @@ const GLOBE_CONFIG: COBEOptions = {
 export function Globe({
 	className,
 	config = GLOBE_CONFIG,
+	autoRotate = false,
 }: {
 	className?: string;
 	config?: COBEOptions;
+	autoRotate?: boolean;
 }) {
 	let phi = 0;
 	let width = 0;
@@ -86,7 +89,7 @@ export function Globe({
 			width: width * 2,
 			height: width * 2,
 			onRender: (state) => {
-				if (!pointerInteracting.current) phi += 0.005;
+				if (autoRotate && !pointerInteracting.current) phi += 0.005;
 				state.phi = phi + rs.get();
 				state.width = width * 2;
 				state.height = width * 2;
@@ -98,7 +101,7 @@ export function Globe({
 			globe.destroy();
 			window.removeEventListener('resize', onResize);
 		};
-	}, [rs, config]);
+	}, [rs, config, autoRotate]);
 
 	return (
 		<div className={cn('absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]', className)}>

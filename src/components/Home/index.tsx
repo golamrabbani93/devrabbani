@@ -1,6 +1,9 @@
+'use client';
+import dynamic from 'next/dynamic';
 import Banner from './components/Banner/Banner';
-import Collaboration from './components/Collaboration/Collaboration';
-
+const Collaboration = dynamic(() => import('./components/Collaboration/Collaboration'), {
+	ssr: false,
+});
 const index = () => {
 	return (
 		<>

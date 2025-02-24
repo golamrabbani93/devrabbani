@@ -1,14 +1,15 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Banner = () => {
 	const bannerBG = {backgroundImage: `url(/images/banner/bgBluredHero.avif)`};
 	return (
 		<section
-			className="relative min-h-screen w-full overflow-hidden  bg-cover bg-right pb-10 lg:bg-center"
+			className="relative min-h-screen w-full overflow-hidden bg-cover bg-right pb-10 lg:bg-center"
 			style={bannerBG}
 		>
 			<div className="animate-fadeInUp relative z-20 mx-auto mt-32 mb-2 flex max-w-full flex-col items-center justify-center px-3 delay-200 md:mt-36 md:max-w-4xl lg:max-w-5xl">
-				<a
+				<Link
 					href="https://ab-next-venture.vercel.app"
 					target="_blank"
 					rel="noreferrer"
@@ -35,7 +36,7 @@ const Banner = () => {
 					>
 						<path d="m9 18 6-6-6-6"></path>
 					</svg>
-				</a>
+				</Link>
 
 				<h2 className="animate-fadeInUp my-2 w-full py-px text-center text-4xl leading-snug font-semibold text-balance text-zinc-700 opacity-90 delay-400 md:text-5xl lg:text-6xl dark:text-zinc-100">
 					<span className="md:text-nowrap md:leading-tight">I help founders turn ideas</span>
@@ -57,9 +58,7 @@ const Banner = () => {
 								width="854"
 								height="421"
 								decoding="async"
-								data-nimg="1"
 								className="mx-2 w-16 cursor-pointer rounded-3xl transition-all duration-300 hover:scale-[4] md:w-20 lg:mx-3"
-								style={{color: 'transparent'}}
 								src="/images/myphoto.png"
 							/>
 						</div>
