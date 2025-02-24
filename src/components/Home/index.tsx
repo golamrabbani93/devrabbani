@@ -5,7 +5,7 @@ const index = () => {
 	return (
 		<>
 			<Banner />
-			<div className="w-full max-w-7xl px-5 md:px-4">
+			<div className="w-full max-w-7xl px-5 md:px-4 mx-auto">
 				<Collaboration />
 			</div>
 		</>

@@ -3,7 +3,6 @@
 import Link from 'next/link';
 
 import dynamic from 'next/dynamic';
-const IconCloud = dynamic(() => import('../TechCircleAnimation/IconCloud'), {ssr: false});
 const Collaboration = () => {
 	return (
 		<div className="mx-auto grid w-full max-w-sm auto-rows-[21rem] grid-cols-6 gap-4 md:max-w-full md:auto-rows-[19rem] my-20">
@@ -415,9 +414,7 @@ const Collaboration = () => {
 
 				<div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] dark:group-hover:bg-neutral-800/10"></div>
 			</div>
-			<div>
-				<IconCloud />
-			</div>
+
 			{/* Technology Canvas End */}
 		</div>
 	);
