@@ -1,5 +1,6 @@
 'use client';
 import dynamic from 'next/dynamic';
+import DynamicIconCloud from '../DynamicIconCloud/DynamicIconCloud';
 const GlobeAnimation = dynamic(() => import('./GlobeAnimation/GlobeAnimation'), {
 	ssr: false,
 });
@@ -15,6 +16,8 @@ const Collaboration = () => {
 			{/* Globe Start */}
 			<GlobeAnimation />
 			{/* Globe Ends */}
+			{/* Dynamic Icon Cloud */}
+			<DynamicIconCloud />
 		</div>
 	);
 };
