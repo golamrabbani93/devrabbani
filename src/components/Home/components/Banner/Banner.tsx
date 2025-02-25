@@ -17,7 +17,7 @@ const Banner = () => {
 				>
 					<span className="mx-1 rounded-full bg-blue-700 px-1.5 text-xs leading-relaxed">New</span>
 					<div
-						className="shiny-text px-1 py-0.5 hover:text-neutral-600 hover:duration-300 dark:hover:text-neutral-400"
+						className="shiny-text px-1 py-0.5 hover:text-neutral-600 hover:duration-300 dark:hover:text-neutral-400 animate-shine"
 						style={{animationDuration: '4s'}}
 					>
 						My Resume is live!

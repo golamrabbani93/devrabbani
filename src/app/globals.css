@@ -82,3 +82,20 @@ body {
 		@apply bg-background text-foreground;
 	}
 }
+.shiny-text {
+	background: linear-gradient(120deg, #fff0 40%, #fffc 50%, #fff0 60%) 0 0 / 200% 100%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: #b5b5b5a4;
+	display: inline-block;
+}
+
+.shiny-text::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: #fff;
+}

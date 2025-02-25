@@ -29,7 +29,7 @@ const Together = () => {
 						/>
 					</div>
 					<div
-						className="shiny-text w-full -translate-y-4 text-center text-3xl font-bold text-balance"
+						className="shiny-text w-full -translate-y-4 text-center text-3xl font-bold text-balance animate-shine"
 						style={{animationDuration: '2s'}}
 					>
 						Let&apos;s work together on your next project
