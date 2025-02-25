@@ -99,6 +99,22 @@ export default {
     					opacity: '1',
     					transform: 'translateX(0)'
     				}
+    			},
+    			marquee: {
+    				from: {
+    					transform: 'translateX(0)'
+    				},
+    				to: {
+    					transform: 'translateX(calc(-100% - var(--gap)))'
+    				}
+    			},
+    			'marquee-vertical': {
+    				from: {
+    					transform: 'translateY(0)'
+    				},
+    				to: {
+    					transform: 'translateY(calc(-100% - var(--gap)))'
+    				}
     			}
     		},
     		animation: {
@@ -106,7 +122,9 @@ export default {
     			fadeInUp: 'fadeInUp 1s ease-out',
     			fadeInDown: 'fadeInDown 0.5s ease-out',
     			fadeInLeft: 'fadeInLeft 0.5s ease-out',
-    			fadeInRight: 'fadeInRight 0.5s ease-out'
+    			fadeInRight: 'fadeInRight 0.5s ease-out',
+    			marquee: 'marquee var(--duration) infinite linear',
+    			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
     		},
     		borderRadius: {
     			lg: 'var(--radius)',

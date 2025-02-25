@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic';
 import DynamicIconCloud from '../DynamicIconCloud/DynamicIconCloud';
 import Together from './Together/Together';
+import {FeatureCards} from './FeatureCards/FeatureCards';
 const GlobeAnimation = dynamic(() => import('./GlobeAnimation/GlobeAnimation'), {
 	ssr: false,
 });
@@ -20,6 +21,7 @@ const Collaboration = () => {
 			{/* Dynamic Icon Cloud */}
 			<DynamicIconCloud />
 			<Together />
+			<FeatureCards />
 		</div>
 	);
 };
