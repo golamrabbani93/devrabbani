@@ -18,7 +18,7 @@ const GlobeAnimation = () => {
 							position: 'relative',
 						}}
 					>
-						<Globe className="top-2 text-red-400" />
+						{/* <Globe className="top-2 text-red-400" /> */}
 					</div>
 				</div>
 			</div>
