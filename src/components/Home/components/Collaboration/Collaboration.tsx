@@ -3,9 +3,7 @@ import dynamic from 'next/dynamic';
 import DynamicIconCloud from '../DynamicIconCloud/DynamicIconCloud';
 import Together from './Together/Together';
 import {FeatureCards} from './FeatureCards/FeatureCards';
-const GlobeAnimation = dynamic(() => import('./GlobeAnimation/GlobeAnimation'), {
-	ssr: false,
-});
+import {AnimateList} from './AnimateList/AnimateList';
 const Video = dynamic(() => import('./Video/Video'), {
 	ssr: false,
 });
@@ -15,9 +13,9 @@ const Collaboration = () => {
 			{/* video start*/}
 			<Video />
 			{/* video End*/}
-			{/* Globe Start */}
-			<GlobeAnimation />
-			{/* Globe Ends */}
+			{/* Animated Listed Start */}
+			<AnimateList />
+			{/* Animated Listed Ends */}
 			{/* Dynamic Icon Cloud */}
 			<DynamicIconCloud />
 			<Together />
