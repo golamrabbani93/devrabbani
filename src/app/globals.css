@@ -99,3 +99,15 @@ body {
 	background-clip: text;
 	color: #fff;
 }
+.text-colorfull {
+	-webkit-text-fill-color: transparent;
+	background: linear-gradient(
+		90.42deg,
+		#4ab1f1 0.58%,
+		#566cec 37.22%,
+		#d749af 73.87%,
+		#ff7c51 112.26%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+}
