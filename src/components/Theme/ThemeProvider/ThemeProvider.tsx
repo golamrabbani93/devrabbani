@@ -13,5 +13,5 @@ export function ThemeProvider({
 		setDomLoaded(true);
 	}, []);
 
-	return <>{domLoaded && <NextThemesProvider {...props}>{children}</NextThemesProvider>}</>;
+	return <>{domLoaded && <NextThemesProvider {...props}>{children} </NextThemesProvider>}</>;
 }

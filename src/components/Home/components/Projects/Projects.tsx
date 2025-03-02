@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import TopTitle from './components/TopTitle/TopTitle';
 import Project from './components/Project/Project';
 import ProjectContent from './components/ProjectContent/ProjectContent';
+import MotionFollower from './components/MotionFollow/MotionFollow';
 
 type ProjectType = {
 	id: string;
@@ -33,6 +34,7 @@ const projectsData: ProjectType[] = [
 
 const Projects = () => {
 	const [activeSection, setActiveSection] = useState<string>(projectsData[0].id);
+	const [hoverCard, setHoverCard] = useState<string>('');
 
 	// Create refs dynamically for each project
 	const projectRefs = useRef<{[key: string]: HTMLDivElement | null}>({});
@@ -69,65 +71,74 @@ const Projects = () => {
 	}, []);
 
 	return (
-		<section
-			id="work"
-			className="relative mx-auto mt-28 w-full max-w-7xl py-10"
-			style={{opacity: 1, transform: 'none'}}
-		>
-			{/* Top Title */}
-			<TopTitle />
+		<>
+			<section
+				id="work"
+				className="relative mx-auto mt-28 w-full max-w-7xl py-10"
+				style={{opacity: 1, transform: 'none'}}
+			>
+				{/* Top Title */}
+				<TopTitle />
 
-			<div className="relative mx-auto flex w-full">
-				{/* Project Cards */}
-				<div className="mx-auto flex max-w-2xl flex-col gap-y-6 md:gap-y-24 lg:max-w-[65%]">
-					{projectsData.map((project) => (
-						<div
-							key={project.id}
-							ref={(el) => {
-								projectRefs.current[project.id] = el;
-							}}
-							id={project.id}
-							className="min-h-screen"
-						>
-							<Project />
+				<div className="relative mx-auto flex w-full">
+					{/* Project Cards */}
+					<div className="mx-auto flex max-w-2xl flex-col gap-y-6 md:gap-y-24 lg:max-w-[65%]">
+						{projectsData.map((project) => (
+							<div
+								key={project.id}
+								ref={(el) => {
+									projectRefs.current[project.id] = el;
+								}}
+								id={project.id}
+								data-id={project.id}
+								onMouseEnter={() => setHoverCard(project.id)}
+								onMouseLeave={() => setHoverCard('')}
+							>
+								<>
+									<Project />
+								</>
+							</div>
+						))}
+					</div>
+
+					{/* Sticky Sidebar for Project Details */}
+					<div className="hidden py-4 lg:sticky lg:block lg:w-[35%]">
+						<div className="sticky top-40 space-y-8 transition-all duration-300">
+							<ProjectContent
+								title={projectsData.find((project) => project.id === activeSection)?.title || ''}
+								// content={
+								// 	projectsData.find((project) => project.id === activeSection)?.content || ''
+								// }
+							/>
 						</div>
-					))}
-				</div>
-
-				{/* Sticky Sidebar for Project Details */}
-				<div className="hidden py-4 lg:sticky lg:block lg:w-[35%]">
-					<div className="sticky top-40 space-y-8 transition-all duration-300">
-						<ProjectContent
-							title={projectsData.find((project) => project.id === activeSection)?.title || ''}
-							content={projectsData.find((project) => project.id === activeSection)?.content || ''}
-						/>
 					</div>
 				</div>
-			</div>
 
-			<a
-				className="flex justify-center gap-2 text-neutral-300 transition-colors hover:text-neutral-100 md:mt-16"
-				href="/project"
-			>
-				See more projects
-				<div className="rounded-full bg-white/5 p-0.5 backdrop-blur-xs">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="18"
-						height="18"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						strokeWidth="2"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						className="lucide lucide-chevron-right"
-					>
-						<path d="m9 18 6-6-6-6"></path>
-					</svg>
-				</div>
-			</a>
-		</section>
+				<a
+					className="flex justify-center gap-2 text-neutral-300 transition-colors hover:text-neutral-100 md:mt-16"
+					href="/project"
+				>
+					See more projects
+					<div className="rounded-full bg-white/5 p-0.5 backdrop-blur-xs">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="18"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							strokeWidth="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							className="lucide lucide-chevron-right"
+						>
+							<path d="m9 18 6-6-6-6"></path>
+						</svg>
+					</div>
+				</a>
+			</section>
+			<MotionFollower id={hoverCard} />
+		</>
 	);
 };
 

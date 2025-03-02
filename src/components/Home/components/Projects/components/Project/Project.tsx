@@ -2,13 +2,17 @@ import Image from 'next/image';
 
 const Project = () => {
 	return (
-		<div className="project-card flex w-full flex-row" style={{opacity: 1, transform: 'none'}}>
+		<div
+			id="ProjectCard"
+			className="project-card flex w-full flex-row"
+			style={{opacity: 1, transform: 'none'}}
+		>
 			<div className="flex flex-col lg:mx-10 lg:w-full">
 				<a
 					target="_blank"
 					draggable="false"
 					className="pointer-events-none relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl md:pointer-events-auto lg:h-[560px] lg:rounded-3xl lg:p-2"
-					href="https://ab-next-venture.vercel.app"
+					href="#"
 				>
 					<div
 						className="absolute inset-x-0 top-0 h-px"
@@ -17,8 +21,8 @@ const Project = () => {
 								'linear-gradient(90deg, rgba(0, 0, 0, 0) 5%, rgba(255, 255, 255, 0.8) 35%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.8) 65%, rgba(0, 0, 0, 0) 95%)',
 						}}
 					></div>
-					<div className="group relative flex size-full flex-col items-center justify-between overflow-hidden rounded-xl lg:rounded-2xl bg-linear-to-b from-black/40 to-transparent transition-all duration-300">
-						<div className="absolute inset-0 -z-1 bg-pink-600"></div>
+					<div className="group relative flex size-full flex-col items-center justify-between overflow-hidden rounded-xl lg:rounded-2xl bg-gradient-to-b from-black/40 to-transparent transition-all duration-300 z-20">
+						<div className="absolute inset-0 -z[-1] bg-pink-600/70"></div>
 						<div
 							className="absolute inset-x-0 top-px z-10 h-[0.8px] opacity-70"
 							style={{

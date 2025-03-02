@@ -111,3 +111,7 @@ body {
 	-webkit-background-clip: text;
 	background-clip: text;
 }
+.project-card :hover .custom-cursor {
+	opacity: 1 !important;
+	transform: scale(1) !important;
+}
