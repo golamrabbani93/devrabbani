@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic';
 import Banner from './components/Banner/Banner';
 import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
 const Collaboration = dynamic(() => import('./components/Collaboration/Collaboration'), {
 	ssr: false,
 });
@@ -13,6 +14,8 @@ const index = () => {
 				<Collaboration />
 			</div>
 			<Projects />
+			<Skills />
+			<div className="h-[1000px]"></div>
 		</>
 	);
 };
