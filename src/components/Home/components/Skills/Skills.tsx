@@ -1,3 +1,4 @@
+import TechLists from './components/TechLists/TechLists';
 import TechTitleBanner from './components/TechTitleBanner/TechTitleBanner';
 
 const Skills = () => {
@@ -7,6 +8,7 @@ const Skills = () => {
 			id="skills"
 		>
 			<TechTitleBanner />
+			<TechLists />
 		</section>
 	);
 };

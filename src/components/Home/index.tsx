@@ -15,7 +15,6 @@ const index = () => {
 			</div>
 			<Projects />
 			<Skills />
-			<div className="h-[1000px]"></div>
 		</>
 	);
 };

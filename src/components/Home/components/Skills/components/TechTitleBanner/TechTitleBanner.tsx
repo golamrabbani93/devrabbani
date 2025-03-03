@@ -14,9 +14,9 @@ const TechTitleBanner = () => {
 			const currentScrollY = window.scrollY;
 
 			if (currentScrollY > lastScrollY) {
-				setRotation((prev) => prev + 3); // Rotate clockwise on scroll down
+				setRotation((prev) => prev + 2); // Rotate clockwise on scroll down
 			} else if (currentScrollY < lastScrollY) {
-				setRotation((prev) => prev - 3); // Rotate counterclockwise on scroll up
+				setRotation((prev) => prev - 2); // Rotate counterclockwise on scroll up
 			}
 
 			lastScrollY = currentScrollY;
@@ -34,7 +34,7 @@ const TechTitleBanner = () => {
 			<motion.div
 				className="relative inset-x-0 -bottom-12 mx-auto size-[300px] md:-bottom-20 md:size-[380px]"
 				style={{rotate: rotation}}
-				transition={{type: 'spring', stiffness: 300, damping: 100}}
+				transition={{type: 'spring', stiffness: 300, damping: 10}}
 			>
 				<Image
 					draggable={false}
@@ -59,7 +59,7 @@ const TechTitleBanner = () => {
 				<span>My Tech Stack</span>
 				<span className="text-colorfull font-nyght tracking-wide"></span>
 			</h2>
-			<div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-black/5 to-black"></div>
+			<div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-[#09090b]/5 to-[#09090b]"></div>
 		</div>
 	);
 };
