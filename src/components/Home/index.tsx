@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Banner from './components/Banner/Banner';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
+import MarqueeText from './components/MarqueeText/MarqueeText';
 const Collaboration = dynamic(() => import('./components/Collaboration/Collaboration'), {
 	ssr: false,
 });
@@ -12,9 +13,13 @@ const index = () => {
 			<Banner />
 			<div className="w-full max-w-7xl px-5 md:px-4 mx-auto">
 				<Collaboration />
+				<Projects />
+				<Skills />
 			</div>
-			<Projects />
-			<Skills />
+
+			<div className="w-full overflow-hidden">
+				<MarqueeText />
+			</div>
 		</>
 	);
 };
