@@ -1,6 +1,17 @@
 import Link from 'next/link';
+import {useRef} from 'react';
 
 const Video = () => {
+	const videoRefs = useRef<HTMLVideoElement[]>([]);
+
+	const handleMouseEnter = (index: number) => {
+		videoRefs.current[index]?.play();
+	};
+
+	const handleMouseLeave = (index: number) => {
+		videoRefs.current[index]?.pause();
+	};
+
 	return (
 		<div className="group relative flex flex-col justify-between overflow-hidden rounded-xl bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
 			<div className="size-full">
@@ -9,26 +20,29 @@ const Video = () => {
 						aria-hidden="true"
 						className="flex absolute top-24 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:top-[45%]"
 					>
-						<div className="group w-32 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl shadow-black transition-all lg:w-40 transform-gpu hover:rotate-0 hover:scale-110 rotate-12 -translate-x-[0px]">
-							<video muted loop playsInline preload="metadata" className="scale-105">
-								<source src="/video/d.webm" type="video/webm" />
-							</video>
-						</div>
-						<div className="group w-32 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl shadow-black transition-all lg:w-40 transform-gpu hover:rotate-0 hover:scale-110 -rotate-12 -translate-x-[30px]">
-							<video muted loop playsInline preload="metadata" className="scale-105">
-								<source src="/video/c.webm" type="video/webm" />
-							</video>
-						</div>
-						<div className="group w-32 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl shadow-black transition-all lg:w-40 transform-gpu hover:rotate-0 hover:scale-110 rotate-12 -translate-x-[60px]">
-							<video muted loop playsInline preload="metadata" className="scale-105">
-								<source src="/video/a.webm" type="video/webm" />
-							</video>
-						</div>
-						<div className="group w-32 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl shadow-black transition-all lg:w-40 transform-gpu hover:rotate-0 hover:scale-110 -rotate-12 -translate-x-[90px]">
-							<video muted loop playsInline preload="metadata" className="scale-105">
-								<source src="/video/b.webm" type="video/webm" />
-							</video>
-						</div>
+						{['d', 'c', 'a', 'b'].map((video, index) => (
+							<div
+								key={video}
+								className={`group w-32 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl shadow-black transition-all lg:w-40 transform-gpu hover:rotate-0 hover:scale-125 hover:z-20 `}
+								onMouseEnter={() => handleMouseEnter(index)}
+								onMouseLeave={() => handleMouseLeave(index)}
+							>
+								<video
+									ref={(el) => {
+										if (el) {
+											videoRefs.current[index] = el;
+										}
+									}}
+									muted
+									loop
+									playsInline
+									preload="metadata"
+									className="scale-105"
+								>
+									<source src={`/images/videos/${video}.webm`} type="video/webm" />
+								</video>
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
