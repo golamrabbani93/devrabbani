@@ -15,7 +15,7 @@ const TechLists = () => {
 				// Frontend Frameworks & Libraries
 				{name: 'ReactJS', icon: 'https://cdn.simpleicons.org/react'},
 				{name: 'NextJS', icon: 'https://cdn.simpleicons.org/nextdotjs/white'},
-
+				{name: 'Redux', icon: 'https://cdn.simpleicons.org/redux/593692'},
 				// Styling & UI Libraries
 				{name: 'Tailwind CSS', icon: 'https://cdn.simpleicons.org/tailwindcss'},
 				{name: 'Material UI', icon: 'https://cdn.simpleicons.org/mui'},
@@ -37,7 +37,7 @@ const TechLists = () => {
 				{name: 'Mongoose', icon: 'https://cdn.simpleicons.org/mongoosedotws'},
 
 				// State Management & Tools
-				{name: 'Redux', icon: 'https://cdn.simpleicons.org/redux/593692'},
+
 				{name: 'Zod', icon: 'https://cdn.simpleicons.org/zod/purple'},
 
 				// Version Control & Deployment
@@ -60,6 +60,10 @@ const TechLists = () => {
 				// Miscellaneous
 				{name: 'Shadcn', icon: 'https://cdn.simpleicons.org/shadcnui/white'},
 				{name: 'React to PDF', icon: 'https://cdn.simpleicons.org/files'},
+				{name: 'Yarn', icon: 'https://cdn.simpleicons.org/yarn'},
+				{name: 'NPM', icon: 'https://cdn.simpleicons.org/npm'},
+				{name: 'Prettier', icon: 'https://cdn.simpleicons.org/prettier'},
+				{name: 'ESLint', icon: 'https://cdn.simpleicons.org/eslint'},
 			].map((tech, index) => (
 				<div
 					key={index}
