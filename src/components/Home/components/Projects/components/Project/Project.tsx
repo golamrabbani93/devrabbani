@@ -55,11 +55,8 @@ const Project = () => {
 							alt="Next Ventures"
 							width="1203"
 							height="753"
-							// decoding="async"
-							// data-nimg="1"
 							className="lg:group-hover:translsate-y-10 w-full max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] transition-all duration-300 will-change-transform lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3"
 							src="/images/projects/next-venture.avif"
-							// style={{color: 'transparent'}}
 						/>
 					</div>
 				</a>
