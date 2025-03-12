@@ -5,7 +5,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
-	scroll-behavior: smooth !important;
 }
 
 html {
@@ -13,7 +12,8 @@ html {
 	color: #fff;
 	scrollbar-width: thin; /* For Firefox */
 	scrollbar-color: #373842 #000; /* For Firefox */
-	scroll-behavior: smooth !important;
+	scroll-behavior: auto !important;
+	height: auto;
 }
 
 body {

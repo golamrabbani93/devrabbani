@@ -5,6 +5,7 @@ import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import MarqueeText from './components/MarqueeText/MarqueeText';
 import About from './components/About/About';
+import Testimonials from './components/Testimonial/Testimonial';
 const Collaboration = dynamic(() => import('./components/Collaboration/Collaboration'), {
 	ssr: false,
 });
@@ -21,6 +22,7 @@ const index = () => {
 			<div className="w-full overflow-hidden">
 				<MarqueeText />
 				<About />
+				<Testimonials />
 			</div>
 		</>
 	);
