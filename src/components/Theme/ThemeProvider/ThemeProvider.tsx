@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {ThemeProvider as NextThemesProvider} from 'next-themes';
-
+import Lenis from 'lenis';
 export function ThemeProvider({
 	children,
 	...props
@@ -11,6 +11,14 @@ export function ThemeProvider({
 
 	React.useEffect(() => {
 		setDomLoaded(true);
+		// Initialize Lenis
+		const lenis = new Lenis({
+			autoRaf: true,
+		});
+
+		// Listen for the scroll event and log the event data
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		lenis.on('scroll', (e) => {});
 	}, []);
 
 	return <>{domLoaded && <NextThemesProvider {...props}>{children} </NextThemesProvider>}</>;

@@ -15,6 +15,7 @@
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
     "framer-motion": "^12.4.7",
+    "lenis": "^1.2.3",
     "lucide-react": "^0.475.0",
     "motion": "^12.4.7",
     "next": "15.1.7",
