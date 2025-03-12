@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from 'react';
 import TopTitle from './components/TopTitle/TopTitle';
 import Project from './components/Project/Project';
 import ProjectContent from './components/ProjectContent/ProjectContent';
-import MotionFollower from './components/MotionFollow/MotionFollow';
 
 type ProjectType = {
 	id: string;
@@ -34,7 +33,6 @@ const projectsData: ProjectType[] = [
 
 const Projects = () => {
 	const [activeSection, setActiveSection] = useState<string>(projectsData[0].id);
-	const [hoverCard, setHoverCard] = useState<string>('');
 
 	// Create refs dynamically for each project
 	const projectRefs = useRef<{[key: string]: HTMLDivElement | null}>({});
@@ -91,11 +89,9 @@ const Projects = () => {
 								}}
 								id={project.id}
 								data-id={project.id}
-								onMouseEnter={() => setHoverCard(project.id)}
-								onMouseLeave={() => setHoverCard('')}
 							>
 								<>
-									<Project />
+									<Project id={project.id} />
 								</>
 							</div>
 						))}
@@ -137,7 +133,6 @@ const Projects = () => {
 					</div>
 				</a>
 			</section>
-			<MotionFollower id={hoverCard} />
 		</>
 	);
 };

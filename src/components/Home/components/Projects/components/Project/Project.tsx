@@ -1,8 +1,12 @@
 import Image from 'next/image';
-
-const Project = () => {
+import MotionFollower from '../MotionFollow/MotionFollow';
+interface ProjectProps {
+	id: string;
+}
+const Project = ({id}: ProjectProps) => {
 	return (
 		<div
+			onMouseEnter={() => console.log('Mouse entered')}
 			id="ProjectCard"
 			className="project-card flex w-full flex-row"
 			style={{opacity: 1, transform: 'none'}}
@@ -21,8 +25,15 @@ const Project = () => {
 								'linear-gradient(90deg, rgba(0, 0, 0, 0) 5%, rgba(255, 255, 255, 0.8) 35%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.8) 65%, rgba(0, 0, 0, 0) 95%)',
 						}}
 					></div>
-					<div className="group relative flex size-full flex-col items-center justify-between overflow-hidden rounded-xl lg:rounded-2xl bg-gradient-to-b from-black/40 to-transparent transition-all duration-300 z-20">
-						<div className="absolute inset-0 -z[-1] bg-pink-600/70"></div>
+					<div className="group relative flex size-full flex-col items-center justify-between overflow-hidden rounded-xl lg:rounded-2xl bg-gradient-to-b from-black to-transparent transition-all duration-300 z-20">
+						<div
+							className="absolute inset-0 -z[-1] "
+							style={{
+								background:
+									'linear-gradient(188.62deg, rgb(107, 13, 51) 49.9%, rgb(219, 39, 119) 81.7%, rgb(244, 114, 182) 93.88%, rgb(249, 215, 147) 113.5%)',
+								minHeight: '100vh',
+							}}
+						></div>
 						<div
 							className="absolute inset-x-0 top-px z-10 h-[0.8px] opacity-70"
 							style={{
@@ -30,8 +41,8 @@ const Project = () => {
 									'linear-gradient(90deg, rgba(0, 0, 0, 0) 20%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 80%)',
 							}}
 						></div>
-						<div className="hidden w-full flex-row items-center justify-between px-12 py-8 opacity-85 lg:flex text-white">
-							<h3 className="max-w-[90%] text-2xl">
+						<div className="hidden w-full flex-row items-center justify-between px-10 py-8 opacity-85 lg:flex ">
+							<h3 className="max-w-[90%] text-2xl text-pink-300 ">
 								A online space for entrepreneurs to pitch ideas, explore others, and gain exposure
 								with clean design.
 							</h3>
@@ -55,7 +66,7 @@ const Project = () => {
 							alt="Next Ventures"
 							width="1203"
 							height="753"
-							className="lg:group-hover:translsate-y-10 w-full max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] transition-all duration-300 will-change-transform lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3"
+							className="lg:group-hover:translsate-y-10 w-full max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 shadow-[0_0_30px_#DB2777]"
 							src="/images/projects/next-venture.avif"
 						/>
 					</div>
@@ -152,6 +163,7 @@ const Project = () => {
 					</div>
 				</div>
 			</div>
+			<MotionFollower id={id} />
 		</div>
 	);
 };
