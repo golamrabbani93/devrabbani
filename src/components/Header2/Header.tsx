@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import {Modal} from './components/Modal/Modal';
 
 const Header = () => {
 	return (
@@ -70,27 +71,8 @@ const Header = () => {
 					</div>
 				</nav>
 			</div>
-			<div className="animate-fadeInRight delay-200">
-				<button
-					className="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] size-9 m-2 text-white/90 hover:bg-white/5 hidden md:flex"
-					aria-label="Open search menu"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						strokeWidth="2"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						className="lucide lucide-command size-4 mx-0"
-					>
-						<path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path>
-					</svg>
-				</button>
-			</div>
+			{/* Add modal  */}
+			<Modal />
 		</div>
 	);
 };
