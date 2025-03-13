@@ -28,7 +28,9 @@ const About = () => {
 							MORE ABOUT ME
 						</p>
 						<span>MERN-Stack Developer and a little bit of </span>
-						<span className="text-colorfull font-nyght tracking-wide">everything</span>
+						<span className="text-colorfull animate-gradient-x font-nyght tracking-wide">
+							everything
+						</span>
 					</h2>
 					<p className="mx-auto max-w-xl text-base font-light tracking-wider text-[#f2f2f2cc] lg:mx-0 lg:text-base text-justify">
 						I'm Golam Rabbani, a proactive MERN-stack developer passionate about creating dynamic

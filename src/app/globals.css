@@ -99,7 +99,7 @@ body {
 	background-clip: text;
 	color: #fff;
 }
-.text-colorfull {
+/* .text-colorfull {
 	-webkit-text-fill-color: transparent;
 	background: linear-gradient(
 		90.42deg,
@@ -110,6 +110,27 @@ body {
 	);
 	-webkit-background-clip: text;
 	background-clip: text;
+	font-weight: semibold;
+} */
+.text-colorfull {
+	-webkit-text-fill-color: transparent;
+	background: linear-gradient(288deg, #ff8000, #f0c 53.2394%, #04f);
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+.animate-gradient-x {
+	animation: gradient-x 6s infinite;
+	background-size: 200% 200%;
+}
+
+@keyframes gradient-x {
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
 }
 .tracking-wide {
 	letter-spacing: 0.025em;

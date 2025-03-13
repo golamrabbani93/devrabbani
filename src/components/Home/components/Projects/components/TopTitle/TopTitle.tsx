@@ -11,7 +11,8 @@ const TopTitle = () => {
 				<p className="mb-4 text-xs uppercase tracking-widest text-white/70 md:text-sm">
 					FEATURED CASE STUDIES
 				</p>
-				<span>Curated</span> <span className="text-colorfull font-nyght tracking-wide">work</span>
+				<span>Curated</span>{' '}
+				<span className="text-colorfull animate-gradient-x font-nyght tracking-wide">work</span>
 			</h2>
 		</div>
 	);

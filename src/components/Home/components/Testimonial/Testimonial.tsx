@@ -53,7 +53,7 @@ const Testimonials = () => {
 					TESTIMONIALS
 				</p>
 				<span>Word on the street</span>{' '}
-				<span className="text-colorfull font-nyght tracking-wide">about me</span>
+				<span className="text-colorfull animate-gradient-x font-nyght tracking-wide">about me</span>
 			</h2>
 			<div className="mx-auto w-full overflow-hidden">
 				<div className="flex gap-4 overflow-x-auto px-4">

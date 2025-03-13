@@ -56,8 +56,8 @@ const TechTitleBanner = () => {
 				<p className="mb-4 text-xs uppercase tracking-widest text-white/70 md:text-sm">
 					I constantly try to improve
 				</p>
-				<span>My Tech Stack</span>
-				<span className="text-colorfull font-nyght tracking-wide"></span>
+				<span>My Tech </span>
+				<span className="text-colorfull animate-gradient-x font-nyght tracking-wide">Stack</span>
 			</h2>
 			<div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-[#09090b]/5 to-[#09090b]"></div>
 		</div>
