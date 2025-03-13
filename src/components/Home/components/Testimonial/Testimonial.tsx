@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import {Marquee} from '@/components/magicui/marquee';
 import React from 'react';
 

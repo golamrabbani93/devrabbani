@@ -67,7 +67,7 @@ const Project = ({id}: ProjectProps) => {
 							width="1203"
 							height="753"
 							className="lg:group-hover:translsate-y-10 w-full max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 shadow-[0_0_30px_#DB2777]"
-							src="/images/projects/next-venture.avif"
+							src="https://res.cloudinary.com/dolttvkme/image/upload/v1741855249/next-venture_fdcb7x.png"
 						/>
 					</div>
 				</a>
