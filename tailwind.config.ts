@@ -124,6 +124,15 @@ export default {
 						backgroundPosition: '100% 0',
 					},
 				},
+				//make 360 degree rotation
+				rotate: {
+					'0%': {
+						transform: 'rotate(0deg)',
+					},
+					'100%': {
+						transform: 'rotate(360deg)',
+					},
+				},
 			},
 			animation: {
 				scaleIn: 'scaleIn 1s ease-out forwards',
@@ -134,6 +143,7 @@ export default {
 				marquee: 'marquee var(--duration) infinite linear',
 				'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
 				shine: 'shine 2s infinite',
+				rotate: 'rotate 8s infinite linear',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
