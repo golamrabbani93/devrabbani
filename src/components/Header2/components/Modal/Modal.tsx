@@ -1,7 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import {Dialog, DialogContent, DialogTrigger} from '@/components/ui/dialog';
 import {DialogTitle} from '@radix-ui/react-dialog';
+import Navigations from '../Navigations/Navigations';
 
 export function Modal() {
 	return (
@@ -9,7 +8,7 @@ export function Modal() {
 			<DialogTrigger asChild>
 				<div className="animate-fadeInRight delay-200">
 					<button
-						className="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] size-9 m-2 text-white/90 hover:bg-white/5 hidden md:flex "
+						className="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] size-9 m-2 text-white/90 hover:bg-white/5 flex"
 						aria-label="Open search menu"
 					>
 						<svg
@@ -29,7 +28,7 @@ export function Modal() {
 					</button>
 				</div>
 			</DialogTrigger>
-			<DialogContent className="sm:max-w-[425px]">
+			<DialogContent className="">
 				<DialogTitle className="hidden">Search</DialogTitle>
 				<div
 					data-slot="command"
@@ -102,45 +101,7 @@ export function Modal() {
 								<div cmdk-group-heading="" aria-hidden="true" id=":r2d:">
 									Navigation
 								</div>
-								<div cmdk-group-items="" role="group" aria-labelledby=":r2d:">
-									<div
-										data-slot="command-item"
-										className="data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground relative cursor-pointer gap-2.5 rounded-xl px-2  text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 group flex items-start !py-1.5 transition-all duration-300"
-										id=":r2e:"
-										cmdk-item=""
-										role="option"
-										aria-disabled="false"
-										aria-selected="false"
-										data-disabled="false"
-										data-selected="false"
-										data-value="HomeWelcome to my forever work-in-progress!"
-									>
-										<div className="mt-0.5 rounded-lg p-2 group-hover:bg-white/80 !bg-blue-500/80">
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												width="24"
-												height="24"
-												viewBox="0 0 24 24"
-												fill="none"
-												stroke="currentColor"
-												strokeWidth="2"
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												className="lucide lucide-house size-5 group-hover:text-black !text-white"
-											>
-												<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
-												<path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-											</svg>
-										</div>
-										<div className="flex flex-col">
-											<span className="line-clamp-1 text-sm">Home</span>
-											<span className="mt-0.5 line-clamp-1 text-xs text-neutral-400 group-hover:text-white">
-												Welcome to my forever work-in-progress!
-											</span>
-										</div>
-									</div>
-									{/* Repeat similar structure for other items */}
-								</div>
+								<Navigations />
 							</div>
 							<div
 								data-slot="command-separator"
