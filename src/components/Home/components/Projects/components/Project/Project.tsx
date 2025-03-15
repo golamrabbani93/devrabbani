@@ -1,9 +1,10 @@
+import {IProjects} from '@/types/projects.interface';
 import MotionFollower from '../MotionFollow/MotionFollow';
-import {IProject} from '@/types/project.type';
+
 import './Project.scss';
 interface ProjectProps {
 	id: string;
-	project: IProject;
+	project: IProjects;
 }
 const Project = ({project, id}: ProjectProps) => {
 	return (
@@ -30,7 +31,7 @@ const Project = ({project, id}: ProjectProps) => {
 						<div
 							className="item w-full lg:w-[35rem] h-[300px] lg:h-full bg-cover bg-center bg-no-repeat"
 							style={{
-								backgroundImage: `url(https://res.cloudinary.com/dolttvkme/image/upload/v1729674213/bikeist_gg9bhn.jpg)`,
+								backgroundImage: `url(${project?.image})`,
 							}}
 						></div>
 					</div>

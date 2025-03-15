@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 
-import {IProject} from '@/types/project.type';
+import {IProjects} from '@/types/projects.interface';
 
 interface ProjectContentProps {
-	project: IProject;
+	project: IProjects;
 }
 
 const ProjectContent = ({project}: ProjectContentProps) => {
@@ -56,13 +56,13 @@ const ProjectContent = ({project}: ProjectContentProps) => {
 					{/* Repeat for other list items */}
 				</ul>
 				<div className="mt-10 flex flex-wrap gap-3 text-sm">
-					{project?.highLightTools.map((tool, index) => (
+					{project?.highLightTech?.map((tool, index) => (
 						<div
 							key={index}
 							className="flex items-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 px-3 py-1 text-sm"
 							style={{opacity: 1, transform: 'none'}}
 						>
-							<img height="16" width="16" alt={tool.name} src={tool.icon} />
+							<img height="16" width="16" alt={tool.name} src={tool.image} />
 							{tool.name}
 						</div>
 					))}

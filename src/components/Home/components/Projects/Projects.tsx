@@ -3,7 +3,7 @@ import TopTitle from './components/TopTitle/TopTitle';
 import Project from './components/Project/Project';
 import ProjectContent from './components/ProjectContent/ProjectContent';
 import {projects} from '@/data/projects';
-import {IProject} from '@/types/project.type';
+import {IProjects} from '@/types/projects.interface';
 
 const Projects = () => {
 	const [activeSection, setActiveSection] = useState<string>(projects[0].id);
@@ -55,20 +55,22 @@ const Projects = () => {
 				<div className="relative mx-auto flex w-full">
 					{/* Project Cards */}
 					<div className="mx-auto flex max-w-2xl flex-col gap-y-6 md:gap-y-24 lg:max-w-[65%]">
-						{projects.map((project: IProject) => (
-							<div
-								key={project.id}
-								ref={(el) => {
-									projectRefs.current[project.id] = el;
-								}}
-								id={project.id}
-								data-id={project.id}
-							>
-								<>
-									<Project project={project} id={project.id} />
-								</>
-							</div>
-						))}
+						{projects
+							.filter((project) => project.item === 'fast3')
+							.map((project) => (
+								<div
+									key={project.id}
+									ref={(el) => {
+										projectRefs.current[project.id] = el;
+									}}
+									id={project.id}
+									data-id={project.id}
+								>
+									<>
+										<Project project={project as IProjects} id={project.id} />
+									</>
+								</div>
+							))}
 					</div>
 
 					{/* Sticky Sidebar for Project Details */}
@@ -76,7 +78,9 @@ const Projects = () => {
 						<div className="sticky top-40 space-y-8 transition-all duration-300">
 							<ProjectContent
 								project={
-									projects.find((project: IProject) => project.id === activeSection) as IProject
+									projects
+										.filter((project) => project.item === 'fast3')
+										.find((project) => project.id === activeSection) as IProjects
 								}
 								// content={
 								// 	projectsData.find((project) => project.id === activeSection)?.content || ''
