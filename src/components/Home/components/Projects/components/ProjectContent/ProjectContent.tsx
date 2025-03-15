@@ -1,21 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 
+import {IProject} from '@/types/project.type';
+
 interface ProjectContentProps {
-	title: string;
+	project: IProject;
 }
 
-const ProjectContent = ({title}: ProjectContentProps) => {
+const ProjectContent = ({project}: ProjectContentProps) => {
 	return (
 		<div className="flex">
 			<div aria-hidden="true" className="my-4 mr-4 h-1 min-w-6 rounded-full bg-pink-600"></div>
 			<div className="flex flex-col items-start lg:h-[500px]">
 				<div className="flex items-center gap-3">
-					<h3 className="text-foreground text-2xl font-bold">{title}</h3>
+					<h3 className="text-foreground text-2xl font-bold">{project?.name}</h3>
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
 						className="translate-y-px cursor-pointer rounded-full p-2 hover:bg-zinc-900"
-						href="https://github.com/AayushBharti/Next-Venture"
+						href="#"
 					>
 						<svg
 							stroke="currentColor"
@@ -54,18 +56,17 @@ const ProjectContent = ({title}: ProjectContentProps) => {
 					{/* Repeat for other list items */}
 				</ul>
 				<div className="mt-10 flex flex-wrap gap-3 text-sm">
-					<div
-						className="flex items-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 px-3 py-1 text-sm"
-						style={{opacity: 1, transform: 'none'}}
-					>
-						<img
-							height="16"
-							width="16"
-							alt="Next.js"
-							src="https://cdn.simpleicons.org/nextdotjs/white"
-						/>
-						Next.js
-					</div>
+					{project?.highLightTools.map((tool, index) => (
+						<div
+							key={index}
+							className="flex items-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 px-3 py-1 text-sm"
+							style={{opacity: 1, transform: 'none'}}
+						>
+							<img height="16" width="16" alt={tool.name} src={tool.icon} />
+							{tool.name}
+						</div>
+					))}
+
 					{/* Repeat for other tech stack items */}
 				</div>
 			</div>

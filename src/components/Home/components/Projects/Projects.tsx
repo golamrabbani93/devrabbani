@@ -2,37 +2,11 @@ import React, {useEffect, useRef, useState} from 'react';
 import TopTitle from './components/TopTitle/TopTitle';
 import Project from './components/Project/Project';
 import ProjectContent from './components/ProjectContent/ProjectContent';
-
-type ProjectType = {
-	id: string;
-	title: string;
-	content: string;
-};
-
-// Projects Data Array
-const projectsData: ProjectType[] = [
-	{
-		id: 'project1',
-		title: 'Project 1',
-		content:
-			'Detailed information about Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-	},
-	{
-		id: 'project2',
-		title: 'Project 2',
-		content:
-			'Detailed information about Project 2. Nulla facilisi. Integer malesuada pellentesque felis.',
-	},
-	{
-		id: 'project3',
-		title: 'Project 3',
-		content:
-			'Detailed information about Project 3. Aenean commodo ligula eget dolor. Aenean massa.',
-	},
-];
+import {projects} from '@/data/projects';
+import {IProject} from '@/types/project.type';
 
 const Projects = () => {
-	const [activeSection, setActiveSection] = useState<string>(projectsData[0].id);
+	const [activeSection, setActiveSection] = useState<string>(projects[0].id);
 
 	// Create refs dynamically for each project
 	const projectRefs = useRef<{[key: string]: HTMLDivElement | null}>({});
@@ -81,7 +55,7 @@ const Projects = () => {
 				<div className="relative mx-auto flex w-full">
 					{/* Project Cards */}
 					<div className="mx-auto flex max-w-2xl flex-col gap-y-6 md:gap-y-24 lg:max-w-[65%]">
-						{projectsData.map((project) => (
+						{projects.map((project: IProject) => (
 							<div
 								key={project.id}
 								ref={(el) => {
@@ -91,7 +65,7 @@ const Projects = () => {
 								data-id={project.id}
 							>
 								<>
-									<Project id={project.id} />
+									<Project project={project} id={project.id} />
 								</>
 							</div>
 						))}
@@ -101,7 +75,9 @@ const Projects = () => {
 					<div className="hidden py-4 lg:sticky lg:block lg:w-[35%]">
 						<div className="sticky top-40 space-y-8 transition-all duration-300">
 							<ProjectContent
-								title={projectsData.find((project) => project.id === activeSection)?.title || ''}
+								project={
+									projects.find((project: IProject) => project.id === activeSection) as IProject
+								}
 								// content={
 								// 	projectsData.find((project) => project.id === activeSection)?.content || ''
 								// }

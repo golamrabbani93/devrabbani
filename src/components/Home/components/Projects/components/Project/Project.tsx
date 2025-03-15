@@ -1,12 +1,13 @@
-import Image from 'next/image';
 import MotionFollower from '../MotionFollow/MotionFollow';
+import {IProject} from '@/types/project.type';
+import './Project.scss';
 interface ProjectProps {
 	id: string;
+	project: IProject;
 }
-const Project = ({id}: ProjectProps) => {
+const Project = ({project, id}: ProjectProps) => {
 	return (
 		<div
-			onMouseEnter={() => console.log('Mouse entered')}
 			id="ProjectCard"
 			className="project-card flex w-full flex-row"
 			style={{opacity: 1, transform: 'none'}}
@@ -16,7 +17,7 @@ const Project = ({id}: ProjectProps) => {
 					target="_blank"
 					draggable="false"
 					className="pointer-events-none relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl md:pointer-events-auto lg:h-[560px] lg:rounded-3xl lg:p-2"
-					href="#"
+					href={project?.live_link}
 				>
 					<div
 						className="absolute inset-x-0 top-0 h-px"
@@ -27,48 +28,11 @@ const Project = ({id}: ProjectProps) => {
 					></div>
 					<div className="group relative flex size-full flex-col items-center justify-between overflow-hidden rounded-xl lg:rounded-2xl bg-gradient-to-b from-black to-transparent transition-all duration-300 z-20">
 						<div
-							className="absolute inset-0 -z[-1] "
+							className="item w-full lg:w-[35rem] h-[300px] lg:h-full bg-cover bg-center bg-no-repeat"
 							style={{
-								background:
-									'linear-gradient(188.62deg, rgb(107, 13, 51) 49.9%, rgb(219, 39, 119) 81.7%, rgb(244, 114, 182) 93.88%, rgb(249, 215, 147) 113.5%)',
-								minHeight: '100vh',
+								backgroundImage: `url(https://res.cloudinary.com/dolttvkme/image/upload/v1729674213/bikeist_gg9bhn.jpg)`,
 							}}
 						></div>
-						<div
-							className="absolute inset-x-0 top-px z-10 h-[0.8px] opacity-70"
-							style={{
-								background:
-									'linear-gradient(90deg, rgba(0, 0, 0, 0) 20%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 80%)',
-							}}
-						></div>
-						<div className="hidden w-full flex-row items-center justify-between px-10 py-8 opacity-85 lg:flex ">
-							<h3 className="max-w-[90%] text-2xl text-pink-300 ">
-								A online space for entrepreneurs to pitch ideas, explore others, and gain exposure
-								with clean design.
-							</h3>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								className="lucide lucide-arrow-right size-6"
-							>
-								<path d="M5 12h14"></path>
-								<path d="m12 5 7 7-7 7"></path>
-							</svg>
-						</div>
-						<Image
-							alt="Next Ventures"
-							width="1203"
-							height="753"
-							className="lg:group-hover:translsate-y-10 w-full max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 shadow-[0_0_30px_#DB2777]"
-							src="https://res.cloudinary.com/dolttvkme/image/upload/v1741855249/next-venture_fdcb7x.png"
-						/>
 					</div>
 				</a>
 				<div className="mt-6 mb-24 flex flex-col px-2 lg:hidden">
