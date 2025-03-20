@@ -21,7 +21,7 @@ const Projects = () => {
 				});
 			},
 			{
-				threshold: 0.8, // Trigger when 60% of the section is visible
+				threshold: 0.4, // Trigger when 60% of the section is visible
 			},
 		);
 
