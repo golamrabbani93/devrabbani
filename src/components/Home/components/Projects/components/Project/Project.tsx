@@ -17,7 +17,7 @@ const Project = ({project, id}: ProjectProps) => {
 				<a
 					target="_blank"
 					draggable="false"
-					className="pointer-events-none relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl md:pointer-events-auto lg:h-[560px] lg:rounded-3xl lg:p-2"
+					className="pointer-events-none relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl md:pointer-events-auto lg:h-[500px] lg:rounded-3xl lg:p-2"
 					href={project?.live_link}
 				>
 					<div
