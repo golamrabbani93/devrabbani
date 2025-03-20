@@ -31,13 +31,12 @@ const Header = () => {
 									<div className="bg-primary absolute -top-2.5 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full">
 										<div className="bg-primary/20 absolute -top-2 -left-2 h-6 w-12 rounded-full blur-md"></div>
 										<div className="bg-primary/20 absolute -top-1 h-6 w-8 rounded-full blur-md"></div>
-										<div className="bg-primary/20 absolute top-0 left-2 h-4 w-4 rounded-full blur-sm"></div>
 									</div>
 								</div>
 							</li>
 							<li className="relative">
 								<Link
-									href="/project"
+									href="/projects"
 									className="gap-1 rounded-full p-2 inline-block px-4 py-1.5 text-sm font-light text-white/70 transition-[text-shadow,color] duration-300 hover:text-white/85"
 								>
 									Work
@@ -64,7 +63,7 @@ const Header = () => {
 							<li className="relative">
 								<button className="items-center justify-center gap-2 relative inline-block h-full cursor-pointer rounded-full bg-white/10 px-4 py-1.5 text-sm font-light text-white/70 transition-all duration-300 hover:bg-white/15 hover:text-white/90">
 									Book a Call
-									<div className="absolute bottom-0 h-1/3 w-full -translate-x-4 rounded-full bg-white opacity-30 blur-sm"></div>
+									<div className="absolute bottom-0 h-1/3 w-full -translate-x-4 rounded-full bg-white/40 opacity-30 blur-sm"></div>
 								</button>
 							</li>
 						</ul>
