@@ -3,13 +3,42 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {Modal} from './components/Modal/Modal';
+import {useRef, useState, useEffect} from 'react';
+import {motion} from 'framer-motion';
+import {usePathname, useRouter} from 'next/navigation';
 
-const Header = () => {
+interface IPosition {
+	left: number;
+	width: number;
+	opacity: number;
+}
+export const Header = () => {
+	const [position, setPosition] = useState<IPosition>({
+		left: 0,
+		width: 0,
+		opacity: 0,
+	});
+	const currentPath = usePathname();
+	const router = useRouter();
+	useEffect(() => {
+		const activeLink = document.querySelector(`a[href="${currentPath}"]`);
+		if (activeLink) {
+			const {width, left} = activeLink.getBoundingClientRect();
+			setPosition({
+				width,
+				opacity: 1,
+				left: currentPath === '/' ? left - 475 : left - 479,
+			});
+		}
+	}, [currentPath]);
 	return (
 		<div className="animate-fadeInDown fixed inset-x-0 top-4 z-[5000] mx-auto mt-1.5 flex w-full max-w-7xl items-center justify-between px-6 py-1.5 pr-4 lg:top-1 lg:px-0">
-			<Link href="/" className="animate-fadeInLeft size-8 p-1 drop-shadow-xl delay-200 md:size-9">
+			<span
+				onClick={() => router.push('/')}
+				className="animate-fadeInLeft size-8 p-1 drop-shadow-xl delay-200 md:size-9 cursor-pointer"
+			>
 				<Image alt="Golam Rabbani logo" width={35} height={35} src="/images/logo.png" />
-			</Link>
+			</span>
 			<div className="absolute top-1/2 left-1/2 hidden w-fit -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-blur-md lg:flex">
 				<nav
 					aria-label="Main"
@@ -18,42 +47,25 @@ const Header = () => {
 					<div style={{position: 'relative'}}>
 						<ul className="group flex-1 list-none items-center justify-center gap-1 relative hidden rounded-full border border-white/10 bg-white/5 px-1.5 py-1 lg:flex">
 							<li className="relative">
-								<Link
-									href="/"
-									className="gap-1 rounded-full p-2 inline-block px-4 py-1.5 text-sm font-light text-white/70 transition-[text-shadow,color] duration-300 hover:text-white/85"
-								>
+								<LinkItem setPosition={setPosition} href="/">
 									Home
-								</Link>
-								<div
-									className="bg-primary/5 absolute inset-0 -z-10 w-full rounded-full"
-									style={{transform: 'none', transformOrigin: '50% 50% 0px'}}
-								>
-									<div className="bg-primary absolute -top-2.5 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full">
-										<div className="bg-primary/20 absolute -top-2 -left-2 h-6 w-12 rounded-full blur-md"></div>
-										<div className="bg-primary/20 absolute -top-1 h-6 w-8 rounded-full blur-md"></div>
-									</div>
-								</div>
+								</LinkItem>
+								<Cursor position={position} />
 							</li>
 							<li className="relative">
-								<Link
-									href="/projects"
-									className="gap-1 rounded-full p-2 inline-block px-4 py-1.5 text-sm font-light text-white/70 transition-[text-shadow,color] duration-300 hover:text-white/85"
-								>
+								<LinkItem setPosition={setPosition} href="/projects">
 									Work
-								</Link>
+								</LinkItem>
 							</li>
 							<li className="relative">
-								<Link
-									href="/about"
-									className="gap-1 rounded-full p-2 inline-block px-4 py-1.5 text-sm font-light text-white/70 transition-[text-shadow,color] duration-300 hover:text-white/85"
-								>
-									About
-								</Link>
-							</li>
-							<li className="relative">
-								<button className="group h-9 w-max items-center justify-center rounded-full inline-block px-4 py-1.5 text-sm font-light text-white/70 transition-[text-shadow,color] duration-300 hover:text-white/85">
+								<LinkItem setPosition={setPosition} href="/blog">
 									Blog
-								</button>
+								</LinkItem>
+							</li>
+							<li className="relative">
+								<LinkItem setPosition={setPosition} href="/contact">
+									Contact
+								</LinkItem>
 							</li>
 							<li className="relative">
 								<button className="group h-9 w-max items-center justify-center rounded-full inline-block px-4 py-1.5 text-sm font-light text-white/70 transition-[text-shadow,color] duration-300 hover:text-white/85">
@@ -76,4 +88,49 @@ const Header = () => {
 	);
 };
 
-export default Header;
+interface CursorProps {
+	position: IPosition;
+}
+
+const Cursor = ({position}: CursorProps) => {
+	return (
+		<motion.div
+			animate={{...position}}
+			className="bg-primary/5 absolute inset-0 -z-10 w-full rounded-full"
+			style={{transform: 'none', transformOrigin: '50% 50% 0px'}}
+		>
+			<div className="bg-primary absolute -top-2.5 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full">
+				<div className="bg-primary/20 absolute -top-2 -left-2 h-6 w-12 rounded-full blur-md"></div>
+				<div className="bg-primary/20 absolute -top-1 h-6 w-8 rounded-full blur-md"></div>
+			</div>
+		</motion.div>
+	);
+};
+interface ILinkItemProps {
+	href: string;
+	children: React.ReactNode;
+	setPosition: (position: IPosition) => void;
+}
+const LinkItem = ({href, children, setPosition}: ILinkItemProps) => {
+	const ref = useRef<HTMLAnchorElement>(null);
+	const handleMouseEnter = () => {
+		if (!ref.current) return;
+		const {width} = ref.current.getBoundingClientRect();
+		setPosition({
+			width,
+			opacity: 1,
+			left: ref.current.getBoundingClientRect().left - 478,
+		});
+	};
+
+	return (
+		<Link
+			ref={ref}
+			onClick={handleMouseEnter}
+			href={href}
+			className={`gap-1 rounded-full p-2 inline-block px-4 py-1.5 text-sm font-light transition-[text-shadow,color] duration-300`}
+		>
+			{children}
+		</Link>
+	);
+};
