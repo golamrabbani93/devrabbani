@@ -29,7 +29,7 @@ const Project = ({project, id}: ProjectProps) => {
 					></div>
 					<div className="group relative flex size-full flex-col items-center justify-between overflow-hidden rounded-xl lg:rounded-2xl bg-gradient-to-b from-black to-transparent transition-all duration-300 z-20">
 						<div
-							className="item w-full lg:w-[35rem] h-[300px] lg:h-full bg-cover bg-center bg-no-repeat"
+							className="item w-full lg:w-[30rem] xl:w-[45rem] h-[300px] lg:h-full bg-cover bg-center bg-no-repeat"
 							style={{
 								backgroundImage: `url(${project?.image})`,
 							}}
