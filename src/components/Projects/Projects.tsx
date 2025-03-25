@@ -1,10 +1,13 @@
+'use client';
+
 import React, {useEffect, useRef, useState} from 'react';
 import TopTitle from './components/TopTitle/TopTitle';
 import Project from './components/Project/Project';
 import ProjectContent from './components/ProjectContent/ProjectContent';
 import {IProjects} from '@/types/projects.interface';
+import Link from 'next/link';
 
-const Projects = ({projects}: {projects: IProjects[]}) => {
+const Projects = ({projects, more}: {projects: IProjects[]; more?: boolean}) => {
 	const [activeSection, setActiveSection] = useState<string>(projects[0].id);
 
 	// Create refs dynamically for each project
@@ -85,9 +88,11 @@ const Projects = ({projects}: {projects: IProjects[]}) => {
 					</div>
 				</div>
 
-				<a
-					className="flex justify-center gap-2 text-neutral-300 transition-colors hover:text-neutral-100 md:mt-16"
-					href="/project"
+				<Link
+					className={`flex justify-center gap-2 text-neutral-300 transition-colors hover:text-neutral-100 md:mt-16 ${
+						more === false ? 'hidden' : ''
+					}`}
+					href="/projects"
 				>
 					See more projects
 					<div className="rounded-full bg-white/5 p-0.5 backdrop-blur-xs">
@@ -106,7 +111,7 @@ const Projects = ({projects}: {projects: IProjects[]}) => {
 							<path d="m9 18 6-6-6-6"></path>
 						</svg>
 					</div>
-				</a>
+				</Link>
 			</section>
 		</>
 	);
