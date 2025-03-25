@@ -3,34 +3,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {Modal} from './components/Modal/Modal';
-import {useRef, useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import {usePathname, useRouter} from 'next/navigation';
 
-interface IPosition {
-	left: number;
-	width: number;
-	opacity: number;
-}
 export const Header = () => {
-	const [position, setPosition] = useState<IPosition>({
-		left: 0,
-		width: 0,
-		opacity: 0,
-	});
-	const currentPath = usePathname();
 	const router = useRouter();
-	useEffect(() => {
-		const activeLink = document.querySelector(`a[href="${currentPath}"]`);
-		if (activeLink) {
-			const {width, left} = activeLink.getBoundingClientRect();
-			setPosition({
-				width,
-				opacity: 1,
-				left: currentPath === '/' ? left - 475 : left - 479,
-			});
-		}
-	}, [currentPath]);
 	return (
 		<div className="animate-fadeInDown fixed inset-x-0 top-4 z-[5000] mx-auto mt-1.5 flex w-full max-w-7xl items-center justify-between px-6 py-1.5 pr-4 lg:top-1 lg:px-0">
 			<span
@@ -46,27 +23,15 @@ export const Header = () => {
 				>
 					<div style={{position: 'relative'}}>
 						<ul className="group flex-1 list-none items-center justify-center gap-1 relative hidden rounded-full border border-white/10 bg-white/5 px-1.5 py-1 lg:flex">
-							<li className="relative">
-								<LinkItem setPosition={setPosition} href="/">
-									Home
-								</LinkItem>
-								<Cursor position={position} />
-							</li>
-							<li className="relative">
-								<LinkItem setPosition={setPosition} href="/projects">
-									Work
-								</LinkItem>
-							</li>
-							<li className="relative">
-								<LinkItem setPosition={setPosition} href="/blog">
-									Blog
-								</LinkItem>
-							</li>
-							<li className="relative">
-								<LinkItem setPosition={setPosition} href="/contact">
-									Contact
-								</LinkItem>
-							</li>
+							<LinkItem href="/">Home</LinkItem>
+
+							<LinkItem href="/projects">Work</LinkItem>
+
+							<LinkItem href="/blog">Blog</LinkItem>
+
+							<LinkItem href="/contact">Contact</LinkItem>
+
+							{/* <Cursor position={position} /> */}
 							<li className="relative">
 								<button className="group h-9 w-max items-center justify-center rounded-full inline-block px-4 py-1.5 text-sm font-light text-white/70 transition-[text-shadow,color] duration-300 hover:text-white/85">
 									More
@@ -88,16 +53,13 @@ export const Header = () => {
 	);
 };
 
-interface CursorProps {
-	position: IPosition;
-}
-
-const Cursor = ({position}: CursorProps) => {
+const Cursor = () => {
 	return (
 		<motion.div
-			animate={{...position}}
-			className="bg-primary/5 absolute inset-0 -z-10 w-full rounded-full"
-			style={{transform: 'none', transformOrigin: '50% 50% 0px'}}
+			layoutId="cursor"
+			className="bg-primary/5 absolute inset-0 -z-10 w-full rounded-full "
+			transition={{duration: 0.5}}
+			style={{borderRadius: '9999px'}}
 		>
 			<div className="bg-primary absolute -top-2.5 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full">
 				<div className="bg-primary/20 absolute -top-2 -left-2 h-6 w-12 rounded-full blur-md"></div>
@@ -109,28 +71,18 @@ const Cursor = ({position}: CursorProps) => {
 interface ILinkItemProps {
 	href: string;
 	children: React.ReactNode;
-	setPosition: (position: IPosition) => void;
 }
-const LinkItem = ({href, children, setPosition}: ILinkItemProps) => {
-	const ref = useRef<HTMLAnchorElement>(null);
-	const handleMouseEnter = () => {
-		if (!ref.current) return;
-		const {width} = ref.current.getBoundingClientRect();
-		setPosition({
-			width,
-			opacity: 1,
-			left: ref.current.getBoundingClientRect().left - 478,
-		});
-	};
-
+const LinkItem = ({href, children}: ILinkItemProps) => {
+	const pathname = usePathname();
 	return (
-		<Link
-			ref={ref}
-			onClick={handleMouseEnter}
-			href={href}
-			className={`gap-1 rounded-full p-2 inline-block px-4 py-1.5 text-sm font-light transition-[text-shadow,color] duration-300`}
-		>
-			{children}
-		</Link>
+		<li className="relative">
+			<Link
+				href={href}
+				className="focus:text-accent-foreground data-[active=true]:text-accent-foreground ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 [&_svg:not([class*='text-'])]:text-muted-foreground gap-1 rounded-full p-2 focus-visible:ring-4 focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4 inline-block px-4 py-1.5 text-sm font-light text-white/70 transition-[text-shadow,color] duration-300 hover:text-white/85"
+			>
+				{children}
+			</Link>
+			{pathname === href && <Cursor />}
+		</li>
 	);
 };
