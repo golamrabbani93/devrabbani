@@ -47,7 +47,7 @@ const TechTitleBanner = () => {
 				/>
 			</motion.div>
 			<h2
-				className="text-4xl md:text-5xl text-center z-30 pb-5 mb-0 absolute w-full bottom-0"
+				className="text-4xl md:text-6xl text-center z-30 pb-5 mb-0 absolute w-full bottom-0"
 				style={{
 					textShadow:
 						'rgba(255, 255, 255, 0.05) 0px 4px 8px, rgba(255, 255, 255, 0.25) 0px 8px 30px',

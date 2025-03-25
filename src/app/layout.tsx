@@ -7,7 +7,7 @@ import {ThemeProvider} from '@/components/Theme/ThemeProvider/ThemeProvider';
 const outfit = Outfit({
 	variable: '--font-outfit',
 	subsets: ['latin'],
-	weight: '400',
+	weight: ['200', '300', '400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
