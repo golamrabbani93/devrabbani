@@ -1,7 +1,7 @@
 'use client';
 import dynamic from 'next/dynamic';
 import Banner from './components/Banner/Banner';
-import Projects from './components/Projects/Projects';
+import Projects from './components/Projects/Project';
 import Skills from './components/Skills/Skills';
 import MarqueeText from './components/MarqueeText/MarqueeText';
 import About from './components/About/About';
