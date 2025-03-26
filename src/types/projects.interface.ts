@@ -4,7 +4,7 @@ export interface IProjects {
 	fullPhoto: string;
 	images: string[];
 	liveLink: string;
-	description: string;
+	description?: string;
 	githubClientLink: string;
 	githubServerLink?: string;
 	technologies?: Technology[];
