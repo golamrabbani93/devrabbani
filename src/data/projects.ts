@@ -23,6 +23,9 @@ export const projectsData = [
 			{name: 'JWT', image: 'https://cdn.simpleicons.org/jsonwebtokens/white'},
 			{name: 'vercel', image: 'https://cdn.simpleicons.org/vercel/white'},
 		],
+		description:
+			'Bikeist is a bike rental system where users rent, manage bookings, and admins control bikes and reservations.',
+		color: 'pink',
 		technologies: [
 			{
 				id: '67173a304a8476b6667fd08d',
@@ -156,6 +159,9 @@ export const projectsData = [
 			'https://res.cloudinary.com/dolttvkme/image/upload/v1729828474/ebjlwrdrxrr-1729828467510-images-carepress-profile.png',
 			'https://res.cloudinary.com/dolttvkme/image/upload/v1729828476/m132wjasfh-1729828471141-images-carepress-user.png',
 		],
+		description:
+			'A full-stack social media application for sharing posts, following users, and liking posts.',
+		color: 'purple',
 		highLightTech: [
 			{name: 'HTML', image: 'https://cdn.simpleicons.org/html5'},
 			{name: 'CSS', image: 'https://cdn.simpleicons.org/css3'},
@@ -313,6 +319,8 @@ export const projectsData = [
 			{name: 'NodeJS', image: 'https://cdn.simpleicons.org/nodedotjs/darkgreen'},
 			{name: 'Firebase', image: 'https://cdn.simpleicons.org/firebase'},
 		],
+		description:
+			'EshopSpots is an e-commerce platform where users can buy and sell products. It features a user-friendly interface, secure payment gateways, and a responsive design.',
 		technologies: [
 			{
 				id: '67173a304a8476b6667fd08d',

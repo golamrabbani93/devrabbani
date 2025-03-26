@@ -23,7 +23,7 @@ const Projects = ({projects, more}: {projects: IProjects[]; more?: boolean}) => 
 				});
 			},
 			{
-				threshold: 0.4, // Trigger when 60% of the section is visible
+				threshold: 0.8, // Trigger when 60% of the section is visible
 			},
 		);
 
@@ -75,7 +75,7 @@ const Projects = ({projects, more}: {projects: IProjects[]; more?: boolean}) => 
 
 					{/* Sticky Sidebar for Project Details */}
 					<div className="hidden py-4 lg:sticky lg:block lg:w-[35%]">
-						<div className="sticky top-40 space-y-8 transition-all duration-300">
+						<div className="sticky top-36 space-y-8 transition-all duration-300">
 							<ProjectContent
 								project={
 									projects.slice(0, 3).find((project) => project.id === activeSection) as IProjects
