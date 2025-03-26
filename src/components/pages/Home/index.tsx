@@ -6,7 +6,7 @@ import Skills from './components/Skills/Skills';
 import MarqueeText from './components/MarqueeText/MarqueeText';
 import About from './components/About/About';
 import Testimonials from './components/Testimonial/Testimonial';
-import Contact from './components/Contact/Contact';
+import Contact from '../../Contact/Contact';
 const Collaboration = dynamic(() => import('./components/Collaboration/Collaboration'), {
 	ssr: false,
 });
