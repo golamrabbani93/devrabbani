@@ -27,16 +27,12 @@ export const Header = () => {
 
 							<LinkItem href="/projects">Work</LinkItem>
 
+							<LinkItem href="/about">About</LinkItem>
+
 							<LinkItem href="/blog">Blog</LinkItem>
 
 							<LinkItem href="/contact">Contact</LinkItem>
 
-							{/* <Cursor position={position} /> */}
-							<li className="relative">
-								<button className="group h-9 w-max items-center justify-center rounded-full inline-block px-4 py-1.5 text-sm font-light text-white/70 transition-[text-shadow,color] duration-300 hover:text-white/85">
-									More
-								</button>
-							</li>
 							<li className="relative">
 								<button className="items-center justify-center gap-2 relative inline-block h-full cursor-pointer rounded-full bg-white/10 px-4 py-1.5 text-sm font-light text-white/70 transition-all duration-300 hover:bg-white/15 hover:text-white/90">
 									Book a Call
