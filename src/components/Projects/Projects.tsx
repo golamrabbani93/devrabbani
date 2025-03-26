@@ -77,9 +77,7 @@ const Projects = ({projects, more}: {projects: IProjects[]; more?: boolean}) => 
 					<div className="hidden py-4 lg:sticky lg:block lg:w-[35%]">
 						<div className="sticky top-36 space-y-8 transition-all duration-300">
 							<ProjectContent
-								project={
-									projects.slice(0, 3).find((project) => project.id === activeSection) as IProjects
-								}
+								project={projects.find((project) => project.id === activeSection) as IProjects}
 								// content={
 								// 	projectsData.find((project) => project.id === activeSection)?.content || ''
 								// }
