@@ -36,23 +36,23 @@ const ProjectContent = ({project}: ProjectContentProps) => {
 						</svg>
 					</a>
 				</div>
-				<p className="text-muted-foreground my-2 text-base font-light">
-					Developed a platform for virtual pitch competitions using Next.js 15, enabling smooth idea
-					sharing and exploration with optimal performance.
-				</p>
+				<p className="text-muted-foreground my-2 text-base font-light">{project?.description}</p>
 				<ul className="text-accent-foreground/85 mt-4 flex flex-col gap-y-2 text-base">
-					<li className="flex items-center text-sm">
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"
-							className="mt-1 mr-2 size-5 shrink-0 fill-pink-600 text-pink-400 bg-pink-600/20 lg:bg-black"
-						>
-							<path d="M12 1C12 1 12 8 10 10C8 12 1 12 1 12C1 12 8 12 10 14C12 16 12 23 12 23C12 23 12 16 14 14C16 12 23 12 23 12C23 12 16 12 14 10C12 8 12 1 12 1Z"></path>
-						</svg>
-						Leveraged Partial Prerendering and After for faster loading.
-					</li>
+					{project?.features?.slice(0, 3).map((feature, index) => (
+						<li className="flex items-center text-sm" key={index}>
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+								className={`mt-1 mr-2 size-5 shrink-0 fill-pink-600 text-pink-400 bg-pink-600/20 lg:bg-black `}
+							>
+								<path d="M12 1C12 1 12 8 10 10C8 12 1 12 1 12C1 12 8 12 10 14C12 16 12 23 12 23C12 23 12 16 14 14C16 12 23 12 23 12C23 12 16 12 14 10C12 8 12 1 12 1Z"></path>
+							</svg>
+							{feature}
+						</li>
+					))}
+
 					{/* Repeat for other list items */}
 				</ul>
 				<div className="mt-10 flex flex-wrap gap-3 text-sm">

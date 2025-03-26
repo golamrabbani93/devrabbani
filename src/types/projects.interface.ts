@@ -4,6 +4,7 @@ export interface IProjects {
 	fullPhoto: string;
 	images: string[];
 	liveLink: string;
+	description: string;
 	githubClientLink: string;
 	githubServerLink?: string;
 	technologies?: Technology[];
@@ -12,6 +13,7 @@ export interface IProjects {
 	isDeleted: boolean;
 	adminEmail?: string;
 	adminPassword?: string;
+	highLightTech?: {name: string; image: string}[];
 	status: string;
 	createdAt?: string;
 	updatedAt?: string;
