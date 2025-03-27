@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import {Modal} from './components/Modal/Modal';
@@ -54,7 +53,7 @@ const Cursor = () => {
 		<motion.div
 			layoutId="cursor"
 			className="bg-primary/5 absolute inset-0 -z-10 w-full rounded-full "
-			transition={{duration: 0.5}}
+			transition={{type: 'tween', duration: 0.7}}
 			style={{borderRadius: '9999px'}}
 		>
 			<div className="bg-primary absolute -top-2.5 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full">
