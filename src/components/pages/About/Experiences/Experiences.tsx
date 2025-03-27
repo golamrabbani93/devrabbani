@@ -1,10 +1,15 @@
 import Image from 'next/image';
 import Internship from './components/Internship/Internship';
 import Github from './components/Github/Github';
+import SideBarAnimation from './components/SideBarAnimation/SideBarAnimation';
 
 export default function Experiences() {
 	return (
-		<section id="experience" className="relative pt-24 pb-12 md:pt-32 md:pb-20">
+		<section
+			// ref={sectionRef}
+			id="experience"
+			className="relative pt-24 pb-12 md:pt-32 md:pb-20"
+		>
 			<div className="w-full md:px-10">
 				<h2 className="relative z-2 text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl text-center mb-4 md:mb-0 max-w-lg mx-auto text-balance">
 					<p className="mb-3 text-xs font-normal tracking-widest text-white/70 uppercase md:text-sm">
@@ -211,15 +216,7 @@ export default function Experiences() {
 						</div>
 					</div>
 
-					<div
-						className="absolute top-0 left-8 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 dark:via-neutral-700"
-						style={{height: '1488.47px'}}
-					>
-						<div
-							className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-pink-500 from-[0%] via-blue-500 via-[10%] to-transparent"
-							style={{height: '300px', opacity: 1}}
-						></div>
-					</div>
+					<SideBarAnimation />
 				</div>
 			</div>
 		</section>
