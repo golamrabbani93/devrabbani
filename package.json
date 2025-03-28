@@ -14,7 +14,6 @@
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "cobe": "^0.6.3",
     "framer-motion": "^12.4.7",
     "lenis": "^1.2.3",
     "lucide-react": "^0.475.0",
@@ -25,7 +24,6 @@
     "react-dom": "^19.0.0",
     "react-icon-cloud": "^4.1.7",
     "sass": "^1.85.0",
-    "simple-icons": "^14.8.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7"
   },
