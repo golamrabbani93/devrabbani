@@ -1,21 +1,22 @@
 import {blogData} from '@/data/blogData';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AllBlog = () => {
 	return blogData.map((post) => (
-		<a
+		<Link
 			key={post.id}
 			className="group mx-auto flex max-w-3xl flex-col gap-4 border-b border-dashed px-0 py-10 lg:flex-row-reverse lg:items-center"
 			href={post.href}
 		>
 			<div className="relative z-1 h-44 w-auto overflow-hidden rounded-sm lg:h-28 lg:w-full lg:max-w-48">
 				<Image
-					alt={post.image.alt}
+					alt={(post.image?.alt as string) || 'Default Alt Text'}
 					loading="lazy"
 					decoding="async"
 					className="bg-center object-cover transition-transform duration-300 group-hover:scale-110"
 					sizes="100vw"
-					src={post.image.src}
+					src={(post.image?.src as string) || '/images/cover.avif'}
 					layout="fill"
 				/>
 			</div>
@@ -23,11 +24,11 @@ const AllBlog = () => {
 				<div className="flex items-center gap-3">
 					<p className="text-sm text-white/60">{post.date}</p>
 					<span className="rounded-sm bg-gray-100 px-1.5 py-0.5 text-xs text-gray-700 dark:bg-emerald-900/25 dark:text-green-400">
-						{post.status}
+						Recently Released
 					</span>
 				</div>
 				<h3 className="relative mt-3 text-xl font-bold">{post.title}</h3>
-				<p className="mt-1 text-sm text-white/75">{post.description}</p>
+				<p className="mt-1 text-sm text-white/75">{post.excerpt}</p>
 				<div className="mt-5 flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
 					<div className="flex items-center gap-5">
 						<div className="flex items-center gap-2">
@@ -46,7 +47,7 @@ const AllBlog = () => {
 								<circle cx="12" cy="12" r="10"></circle>
 								<polyline points="12 6 12 12 16 14"></polyline>
 							</svg>
-							<p className="text-xs">{post.readTime}</p>
+							<p className="text-xs">{post.readingTime}</p>
 						</div>
 					</div>
 					<div className="flex flex-wrap gap-x-2 gap-y-1 text-xs lg:text-sm">
@@ -61,7 +62,7 @@ const AllBlog = () => {
 					</div>
 				</div>
 			</div>
-		</a>
+		</Link>
 	));
 };
 

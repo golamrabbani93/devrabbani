@@ -48,7 +48,7 @@ const index = () => {
 					</div>
 				</div>
 				{/* Search Blog End */}
-				<div className="mt-20 flex w-full border-white/5 md:border-t">
+				<div className="mt-20  w-full border-white/5 md:border-t">
 					<div className="mx-auto flex flex-col-reverse md:flex-row">
 						<div className="w-full border-white/5 px-2 md:border-r md:px-8 lg:min-w-3xl">
 							{/* //blogs */}
