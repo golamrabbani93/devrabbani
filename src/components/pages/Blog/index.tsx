@@ -1,10 +1,12 @@
 import Contact from '@/components/Contact/Contact';
 import AllBlog from './components/AllBlog/AllBlog';
 import Topics from './components/Topics/Topics';
+import BreadCrumb from '@/components/BreadCrumb/BreadCrumb';
 
 const index = () => {
 	return (
 		<>
+			<BreadCrumb />
 			<div className="min-h-screen px-4 py-16 pt-36 md:px-1">
 				<h2 className="relative z-[2] text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl text-center max-w-xs md:max-w-xl text-balance mx-auto mb-10 md:mb-10">
 					<p className="mb-3 text-xs font-normal tracking-widest text-white/70 uppercase md:text-sm">

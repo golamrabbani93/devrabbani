@@ -1006,7 +1006,7 @@ const BreadCrumb = () => {
 			</svg>
 
 			<Image
-				src="/images/crumpled-paper.webp"
+				src="/images/crumpled-paper.avif"
 				alt="crumpled paper texture"
 				layout="fill"
 				sizes="100vw"
