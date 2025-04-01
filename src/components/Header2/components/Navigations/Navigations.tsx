@@ -84,6 +84,7 @@ const Navigations = () => {
 			),
 			title: 'About',
 			description: 'Learn more about me!',
+			active: pathname === '/about',
 		},
 		{
 			id: 'blog',
