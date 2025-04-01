@@ -31,7 +31,7 @@ export const Header = () => {
 
 							<LinkItem href="/blog">Blog</LinkItem>
 
-							<LinkItem href="/contact">Contact</LinkItem>
+							<LinkItem href="#">Contact</LinkItem>
 
 							<BookACallModal />
 						</ul>
