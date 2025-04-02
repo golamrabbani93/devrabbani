@@ -1,6 +1,6 @@
 import {IProjects} from '@/types/projects.interface';
 import MotionFollower from '../MotionFollow/MotionFollow';
-
+import {motion} from 'framer-motion';
 import './Project.scss';
 interface ProjectProps {
 	id: string;
@@ -8,10 +8,13 @@ interface ProjectProps {
 }
 const Project = ({project, id}: ProjectProps) => {
 	return (
-		<div
+		<motion.div
 			id="ProjectCard"
 			className="project-card flex w-full flex-row"
-			style={{opacity: 1, transform: 'none'}}
+			initial={{opacity: 0, scale: 0.8}}
+			whileInView={{opacity: 1, scale: 1}}
+			transition={{duration: 1}}
+			exit={{opacity: 0, scale: 0.8}}
 		>
 			<div className="flex flex-col lg:mx-10 lg:w-full">
 				<a
@@ -104,7 +107,7 @@ const Project = ({project, id}: ProjectProps) => {
 				</div>
 			</div>
 			<MotionFollower id={id} />
-		</div>
+		</motion.div>
 	);
 };
 
