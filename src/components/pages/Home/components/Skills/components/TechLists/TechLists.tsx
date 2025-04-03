@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion';
 const TechLists = () => {
 	return (
 		<div className="mx-auto mt-16 flex max-w-4xl flex-wrap justify-center gap-2 text-lg text-gray-800 lg:gap-4">
@@ -65,11 +66,15 @@ const TechLists = () => {
 				{name: 'Prettier', icon: 'https://cdn.simpleicons.org/prettier'},
 				{name: 'ESLint', icon: 'https://cdn.simpleicons.org/eslint'},
 			].map((tech, index) => (
-				<div
+				<motion.div
 					key={index}
 					draggable={false}
 					className="relative flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 px-4 py-1.5 text-sm text-white/80 lg:text-base"
-					style={{opacity: 1, transform: 'none'}}
+					initial={{opacity: 0, rotate: -10, scale: 0.5}}
+					whileInView={{opacity: 1, rotate: 0, scale: 1}}
+					transition={{delay: index * 0.1}}
+					exit={{opacity: 0, rotate: -10, scale: 0.5}}
+					viewport={{once: false, amount: 0.2}}
 				>
 					{tech.icon && (
 						// eslint-disable-next-line @next/next/no-img-element
@@ -81,8 +86,13 @@ const TechLists = () => {
 							src={tech.icon}
 						/>
 					)}
-					{tech.name}
-				</div>
+					<span className="relative">
+						<span className="animate-gradient-x text-colorfull absolute inset-0 h-full w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+							{tech.name}
+						</span>
+						<span className="transition-colors duration-300">{tech.name}</span>
+					</span>
+				</motion.div>
 			))}
 		</div>
 	);
