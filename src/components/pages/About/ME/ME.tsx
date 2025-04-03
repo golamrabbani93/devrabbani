@@ -1,3 +1,5 @@
+import TextAnimation from '@/components/Animation/TextAnimation/TextAnimation';
+
 /* eslint-disable react/no-unescaped-entities */
 const ME = () => {
 	return (
@@ -11,9 +13,7 @@ const ME = () => {
 					transform: 'translateY(20px)',
 				}}
 			>
-				<p className="mb-3 text-xs font-normal tracking-widest text-white/70 uppercase md:text-sm">
-					More About Me
-				</p>
+				<TextAnimation>More About Me</TextAnimation>
 				<span className="">
 					<span className="">Hi there! I&apos;m </span>{' '}
 					<span className="text-colorfull animate-gradient-x font-nyght tracking-wide">
