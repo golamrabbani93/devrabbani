@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Internship from './components/Internship/Internship';
 import Github from './components/Github/Github';
 import SideBarAnimation from './components/SideBarAnimation/SideBarAnimation';
+import TextAnimation from '@/components/Animation/TextAnimation/TextAnimation';
 
 export default function Experiences() {
 	return (
@@ -12,9 +13,10 @@ export default function Experiences() {
 		>
 			<div className="w-full md:px-10">
 				<h2 className="relative z-2 text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl text-center mb-4 md:mb-0 max-w-lg mx-auto text-balance">
-					<p className="mb-3 text-xs font-normal tracking-widest text-white/70 uppercase md:text-sm">
-						The Experience
-					</p>
+					{/* <p className="mb-3 text-xs font-normal tracking-widest text-white/70 uppercase md:text-sm">
+						
+					</p> */}
+					<TextAnimation>The Experience</TextAnimation>
 					<span className="">
 						<span className="">Experience That Brings </span>
 						<span
