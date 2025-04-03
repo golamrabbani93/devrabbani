@@ -12,7 +12,7 @@ const TopTitle = () => {
 			exit={{opacity: 0, y: 20}}
 			transition={{duration: 0.5}}
 		>
-			<TextAnimation text="FEATURED CASE STUDIES" />
+			<TextAnimation>FEATURED CASE STUDIES</TextAnimation>
 			<span className="">
 				<span className="">Curated</span>{' '}
 				<motion.span
@@ -21,7 +21,7 @@ const TopTitle = () => {
 					exit={{scale: 0.9}}
 					className="text-colorfull animate-gradient-x font-nyght tracking-wide"
 				>
-					work
+					Work
 				</motion.span>
 			</span>
 		</motion.h2>
