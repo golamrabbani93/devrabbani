@@ -46,11 +46,7 @@ const Projects = ({projects, more}: {projects: IProjects[]; more?: boolean}) => 
 
 	return (
 		<>
-			<section
-				id="work"
-				className="relative mx-auto mt-28 w-full max-w-7xl py-10"
-				style={{opacity: 1, transform: 'none'}}
-			>
+			<section id="work" className="relative mx-auto mt-28 w-full max-w-7xl py-10">
 				{/* Top Title */}
 				<TopTitle />
 
