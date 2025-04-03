@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import TextAnimation from '@/components/Animation/TextAnimation/TextAnimation';
 import {Marquee} from '@/components/magicui/marquee';
 
 import React from 'react';
@@ -49,9 +50,7 @@ const Testimonials = () => {
 	return (
 		<section className="my-32 md:mt-52 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
 			<h2 className="z-2 relative text-center text-4xl md:text-6xl mt-44 md:mt-28 mb-16 mx-12 md:mx-2 text-shadow-lg">
-				<p className="mb-4 text-xs uppercase tracking-widest text-white/70 md:text-sm">
-					TESTIMONIALS
-				</p>
+				<TextAnimation>TESTIMONIALS</TextAnimation>
 				<span>Word on the street</span>{' '}
 				<span className="text-colorfull animate-gradient-x font-nyght tracking-wide">about me</span>
 			</h2>
