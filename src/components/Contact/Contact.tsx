@@ -1,6 +1,6 @@
 import Rotate from './components/Rotate/Rotate';
 import TopImage from './components/TopImage/TopImage';
-
+import {motion} from 'framer-motion';
 const Contact = () => {
 	return (
 		<div className="relative z-0 mt-40 flex w-full justify-center overflow-x-hidden bg-[url('/images/cta.avif')]  bg-cover bg-center px-4 py-20 ">
@@ -24,12 +24,22 @@ const Contact = () => {
 					<TopImage />
 				</div>
 				<span className="mt-4 text-2xl font-light tracking-wide text-white sm:text-4xl lg:text-5xl">
-					<h3 className="text-nowrap" style={{opacity: 1, transform: 'none'}}>
+					<motion.h3
+						className="text-nowrap"
+						initial={{opacity: 0, transform: 'translateX(-300px)'}}
+						whileInView={{opacity: 1, transform: 'none'}}
+						transition={{duration: 1, delay: 0.2}}
+					>
 						FROM CONCEPT TO <span className="font-extrabold">CREATION</span>
-					</h3>
-					<h3 className="mt-3 text-nowrap" style={{opacity: 1, transform: 'none'}}>
+					</motion.h3>
+					<motion.h3
+						className="mt-3 text-nowrap"
+						initial={{opacity: 0, transform: 'translateX(300px)'}}
+						whileInView={{opacity: 1, transform: 'none'}}
+						transition={{duration: 1, delay: 0.2}}
+					>
 						LET&apos;s MAKE IT <span className="font-extrabold">HAPPEN!</span>
-					</h3>
+					</motion.h3>
 				</span>
 				<div className="group" style={{transform: 'none'}}>
 					<div className="group relative inline-flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-white/10 bg-white/10 py-[3px] pl-2 pr-[3px] text-base font-medium opacity-85 backdrop-blur-xs transition-all hover:bg-transparent md:py-1 md:pl-3 md:pr-1 my-10 group-hover:scale-125">
