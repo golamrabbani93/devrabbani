@@ -1,6 +1,6 @@
 import {TextAnimate} from '@/components/magicui/text-animate';
 
-const TextAnimation = ({text}: {text: string}) => {
+const TextAnimation = ({children}: {children: string}) => {
 	return (
 		<TextAnimate
 			className="mb-3 text-xs font-normal tracking-widest text-white/70 uppercase md:text-sm"
@@ -13,7 +13,7 @@ const TextAnimation = ({text}: {text: string}) => {
 			}}
 			duration={0.5}
 		>
-			{text}
+			{children}
 		</TextAnimate>
 	);
 };
