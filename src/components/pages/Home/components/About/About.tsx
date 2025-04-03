@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import Image from 'next/image';
 import PenFollower from './components/PenFollower/PenFollower';
 import {useState} from 'react';
+import TextAnimation from '@/components/Animation/TextAnimation/TextAnimation';
 
 const About = () => {
 	const [visible, setVisible] = useState(false);
@@ -24,9 +25,8 @@ const About = () => {
 								'rgba(255, 255, 255, 0.05) 0px 4px 8px, rgba(255, 255, 255, 0.25) 0px 8px 30px',
 						}}
 					>
-						<p className="mb-4 text-xs uppercase tracking-widest text-white/70 md:text-sm">
-							MORE ABOUT ME
-						</p>
+						<p className="mb-4 text-xs uppercase tracking-widest text-white/70 md:text-sm"></p>
+						<TextAnimation>MORE ABOUT ME</TextAnimation>
 						<span>MERN-Stack Developer and a little bit of </span>
 						<span className="text-colorfull animate-gradient-x font-nyght tracking-wide">
 							everything
