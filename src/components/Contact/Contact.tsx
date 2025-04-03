@@ -1,3 +1,4 @@
+'use client';
 import Rotate from './components/Rotate/Rotate';
 import TopImage from './components/TopImage/TopImage';
 import {motion} from 'framer-motion';
@@ -28,7 +29,7 @@ const Contact = () => {
 						className="text-nowrap"
 						initial={{opacity: 0, transform: 'translateX(-300px)'}}
 						whileInView={{opacity: 1, transform: 'none'}}
-						transition={{duration: 1, delay: 0.2}}
+						transition={{duration: 0.6, delay: 0.2}}
 					>
 						FROM CONCEPT TO <span className="font-extrabold">CREATION</span>
 					</motion.h3>
@@ -36,7 +37,7 @@ const Contact = () => {
 						className="mt-3 text-nowrap"
 						initial={{opacity: 0, transform: 'translateX(300px)'}}
 						whileInView={{opacity: 1, transform: 'none'}}
-						transition={{duration: 1, delay: 0.2}}
+						transition={{duration: 0.6, delay: 0.2}}
 					>
 						LET&apos;s MAKE IT <span className="font-extrabold">HAPPEN!</span>
 					</motion.h3>
