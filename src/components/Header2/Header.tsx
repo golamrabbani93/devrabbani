@@ -31,8 +31,6 @@ export const Header = () => {
 
 							<LinkItem href="/blog">Blog</LinkItem>
 
-							<LinkItem href="#">Contact</LinkItem>
-
 							<BookACallModal />
 						</ul>
 					</div>
