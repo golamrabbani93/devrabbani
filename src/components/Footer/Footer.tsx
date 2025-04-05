@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Footer = () => {
 	return (
-		<footer className=" w-full bg-black text-neutral-300">
+		<footer className=" w-full bg-black text-neutral-300 pl-4 xl:pl-0">
 			<div className="h-px w-full bg-gradient-to-r from-black via-neutral-600 to-black"></div>
 			<div className="container mx-auto my-12 grid max-w-6xl gap-8 py-12 md:grid-cols-[1.1fr_1.4fr_1.1fr] md:gap-16">
 				<div>
