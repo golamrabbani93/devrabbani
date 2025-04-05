@@ -1,7 +1,9 @@
+'use client';
 import Contact from '@/components/Contact/Contact';
 import Experiences from './Experiences/Experiences';
 import ME from './ME/ME';
 import BreadCrumb from '@/components/BreadCrumb/BreadCrumb';
+import Skills from '../Home/components/Skills/Skills';
 
 const index = () => {
 	return (
@@ -11,6 +13,7 @@ const index = () => {
 				<ME />
 				<Experiences />
 			</div>
+			<Skills />
 			<Contact />
 		</>
 	);
