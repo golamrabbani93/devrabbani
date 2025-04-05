@@ -2,6 +2,7 @@ import Contact from '@/components/Contact/Contact';
 import AllBlog from './components/AllBlog/AllBlog';
 import Topics from './components/Topics/Topics';
 import BreadCrumb from '@/components/BreadCrumb/BreadCrumb';
+import TextAnimation from '@/components/Animation/TextAnimation/TextAnimation';
 
 const index = () => {
 	return (
@@ -9,9 +10,7 @@ const index = () => {
 			<BreadCrumb />
 			<div className="min-h-screen px-4 py-16 pt-36 md:px-1">
 				<h2 className="relative z-[2] text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl text-center max-w-xs md:max-w-xl text-balance mx-auto mb-10 md:mb-10">
-					<p className="mb-3 text-xs font-normal tracking-widest text-white/70 uppercase md:text-sm">
-						The Blog
-					</p>
+					<TextAnimation>The Blog</TextAnimation>
 					<span className="">
 						<span className="">The Pensieve of </span>
 						<span className="text-colorfull animate-gradient-x font-nyght tracking-wide">
