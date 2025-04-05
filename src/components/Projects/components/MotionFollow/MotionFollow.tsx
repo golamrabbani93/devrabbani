@@ -35,7 +35,7 @@ const MotionFollower = ({id}: {id: string}) => {
 
 	return (
 		<motion.div
-			className="custom-cursor pointer-events-none top-0 left-0 fixed z-50 flex items-center justify-center rounded-full border border-white/[0.25] backdrop-blur-sm"
+			className="custom-cursor pointer-events-none top-0 left-0 fixed z-50 md:flex items-center justify-center rounded-full border border-white/[0.25] backdrop-blur-sm hidden"
 			style={{
 				left: smoothX,
 				top: smoothY,
