@@ -1,8 +1,10 @@
+import {contactDrawer} from '@/utils/drawer';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Banner = () => {
 	const bannerBG = {backgroundImage: `url(/images/banner/bgBluredHero.avif)`};
+
 	return (
 		<section
 			className="relative min-h-screen w-full overflow-hidden bg-cover bg-right pb-10 lg:bg-center"
@@ -10,7 +12,7 @@ const Banner = () => {
 		>
 			<div className="animate-fadeInUp relative z-20 mx-auto mt-32 mb-2 flex max-w-full flex-col items-center justify-center px-3 delay-200 md:mt-36 md:max-w-4xl lg:max-w-5xl">
 				<Link
-					href="https://ab-next-venture.vercel.app"
+					href="https://drive.google.com/file/d/1I2R7nnqgCk0HBGVPAexzEVUi1zgGYdLG/view?usp=sharing"
 					target="_blank"
 					rel="noreferrer"
 					className="group flex cursor-pointer items-center rounded-full border border-black/5 bg-neutral-200 text-sm text-white backdrop-blur-xs transition-all ease-in lg:text-base dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
@@ -67,7 +69,10 @@ const Banner = () => {
 				</h1>
 
 				<div className="animate-fadeInUp z-100 mt-4 flex flex-col items-center justify-center gap-6 delay-800 md:mt-8 md:flex-row md:gap-10">
-					<div className="group relative inline-flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-white/10 bg-white/10 py-[3px] pl-2 pr-[3px] text-base font-medium opacity-85 backdrop-blur-xs transition-all hover:bg-transparent md:py-1 md:pl-3 md:pr-1">
+					<div
+						onClick={contactDrawer}
+						className="group relative inline-flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-white/10 bg-white/10 py-[3px] pl-2 pr-[3px] text-base font-medium opacity-85 backdrop-blur-xs transition-all hover:bg-transparent md:py-1 md:pl-3 md:pr-1"
+					>
 						<span className="z-10 px-3 text-white transition-colors duration-300 group-hover:text-black">
 							Let&apos;s Connect
 						</span>
