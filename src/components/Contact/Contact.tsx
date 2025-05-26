@@ -1,4 +1,5 @@
 'use client';
+import {contactDrawer} from '@/utils/drawer';
 import Rotate from './components/Rotate/Rotate';
 import TopImage from './components/TopImage/TopImage';
 import {motion} from 'framer-motion';
@@ -43,7 +44,10 @@ const Contact = () => {
 					</motion.h3>
 				</span>
 				<div className="group" style={{transform: 'none'}}>
-					<div className="group relative inline-flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-white/10 bg-white/10 py-[3px] pl-2 pr-[3px] text-base font-medium opacity-85 backdrop-blur-xs transition-all hover:bg-transparent md:py-1 md:pl-3 md:pr-1 my-10 group-hover:scale-125">
+					<div
+						onClick={contactDrawer}
+						className="group relative inline-flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-white/10 bg-white/10 py-[3px] pl-2 pr-[3px] text-base font-medium opacity-85 backdrop-blur-xs transition-all hover:bg-transparent md:py-1 md:pl-3 md:pr-1 my-10 group-hover:scale-125"
+					>
 						<span className="z-10 px-3 text-white transition-colors duration-300 group-hover:text-black">
 							Get In Touch
 						</span>
