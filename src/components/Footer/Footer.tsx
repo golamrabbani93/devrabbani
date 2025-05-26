@@ -1,3 +1,6 @@
+'use client';
+
+import {contactDrawer} from '@/utils/drawer';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -112,18 +115,18 @@ const Footer = () => {
 								</Link>
 							</li>
 							<li>
-								<Link className="transition-colors hover:text-neutral-50" href="/project">
-									Projects
+								<Link className="transition-colors hover:text-neutral-50" href="/projects">
+									Work
+								</Link>
+							</li>
+							<li>
+								<Link className="transition-colors hover:text-neutral-50" href="/about">
+									About
 								</Link>
 							</li>
 							<li>
 								<Link className="transition-colors hover:text-neutral-50" href="/blog">
 									Blog
-								</Link>
-							</li>
-							<li>
-								<Link className="transition-colors hover:text-neutral-50" href="/#about">
-									About
 								</Link>
 							</li>
 						</ul>
@@ -132,24 +135,27 @@ const Footer = () => {
 						<h3 className="text-sm font-medium text-white">The Website</h3>
 						<ul className="mt-4 flex flex-col gap-y-3 text-sm">
 							<li>
-								<Link className="transition-colors hover:text-neutral-50" href="/guestbook">
+								<Link className="transition-colors hover:text-neutral-50" href="#">
 									Guest Book
 								</Link>
 							</li>
 							<li>
-								<Link className="transition-colors hover:text-neutral-50" href="/bucket-list">
+								<Link className="transition-colors hover:text-neutral-50" href="#">
 									Bucket List
 								</Link>
 							</li>
 							<li>
-								<Link className="transition-colors hover:text-neutral-50" href="/links">
+								<Link className="transition-colors hover:text-neutral-50" href="#">
 									Links
 								</Link>
 							</li>
 							<li>
-								<Link className="transition-colors hover:text-neutral-50" href="/cal">
+								<span
+									className="transition-colors hover:text-neutral-50 cursor-pointer"
+									onClick={contactDrawer}
+								>
 									Book a call
-								</Link>
+								</span>
 							</li>
 						</ul>
 					</div>
