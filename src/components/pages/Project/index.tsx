@@ -10,8 +10,8 @@ const index = () => {
 			<BreadCrumb />
 			<section className="relative mx-auto w-full max-w-7xl mt-0 px-4 pt-36">
 				<Projects projects={data} more={false} />
-				<Contact />
 			</section>
+			<Contact />
 		</>
 	);
 };
