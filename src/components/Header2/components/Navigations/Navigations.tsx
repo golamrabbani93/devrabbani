@@ -1,3 +1,5 @@
+import {contactDrawer} from '@/utils/drawer';
+import {modalClose} from '@/utils/modal';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 
@@ -198,21 +200,6 @@ const Navigations = () => {
 			description: 'Things to do at least once in my life',
 		},
 	];
-	//close modal when click on navigation item
-	const modalClose = () => {
-		const closeButton = document.getElementById('close-dialog') as HTMLButtonElement;
-		if (closeButton) {
-			closeButton.click();
-		}
-	};
-	//open contact drawer when click on contact me
-	const contactDrawer = () => {
-		modalClose();
-		const contactButton = document.getElementById('contact-drawer') as HTMLButtonElement;
-		if (contactButton) {
-			contactButton.click();
-		}
-	};
 
 	return (
 		<div
