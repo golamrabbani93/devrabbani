@@ -26,6 +26,12 @@ const useIcons = (slugs: string[]) => {
 					case 'Vercel':
 						icon.hex = color;
 						break;
+					case 'Amazon Web Services':
+						icon.hex = color;
+						break;
+					case 'shadcn/ui':
+						icon.hex = '#ffffff';
+						break;
 					default:
 						icon.hex = icon.hex;
 				}
@@ -102,7 +108,8 @@ const DynamicIconCloud = () => {
 								alignItems: 'center',
 								width: '100%',
 								paddingTop: '100px',
-								// margin: '20px', // Adjust margin for the container
+								height: '100%',
+								// margin: '200px', // Adjust margin for the container
 								backgroundColor: '#121212',
 							}}
 						>
@@ -112,13 +119,15 @@ const DynamicIconCloud = () => {
 								}}
 								options={{
 									clickToFront: 0,
-									depth: 0.2,
-									minSpeed: 0.2, // Control the minimum rotation speed
+									depth: 0.2, // Adjust the depth of the cloud
+									shape: 'sphere', // Change the shape of the cloud
+									minSpeed: 0.16, // Control the minimum rotation speed
 									initial: [0.06, -0.06], // Start rotating automatically
-									maxSpeed: 0.2, // Control the maximum rotation speed
+									maxSpeed: 0.16, // Control the maximum rotation speed
 									outlineMethod: 'none',
 									wheelZoom: false,
-									zoomMax: 1,
+									zoomMax: 10, // Control the maximum zoom level
+									zoom: 0.9, // Initial zoom level
 									activeCursor: 'pointer',
 									animTiming: 'Smooth',
 								}}
