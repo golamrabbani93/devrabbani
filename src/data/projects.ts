@@ -134,9 +134,9 @@ export const projectsData = [
 			},
 		],
 		features: [
-			'User-friendly interface for renting bikes.',
-			'User dashboard with rental history, including paid and unpaid tabs.',
-			'Gamified discount feature with a spin-the-wheel component.',
+			'Responsive design with a mobile-first approach.',
+			'Video consultant with a calendar booking system.',
+			'Manage full website feature via an admin panel.',
 			'Secure payment integration via Stripe.',
 			'Profile management and bike comparison tool.',
 			'History & Milestones section with a timeline of achievements.',
