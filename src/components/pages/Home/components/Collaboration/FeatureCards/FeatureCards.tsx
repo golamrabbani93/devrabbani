@@ -31,7 +31,7 @@ const features = [
 		Icon: FileTextIcon,
 		name: 'The Inside Scoop',
 		description: 'Currently building a Saas Application',
-		href: '/work',
+		href: '/projects',
 		cta: 'View Recent work',
 		className: 'col-span-3 lg:col-span-1',
 		background: (
