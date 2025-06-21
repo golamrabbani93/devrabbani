@@ -113,9 +113,9 @@ const DynamicIconCloud = () => {
 								options={{
 									clickToFront: 0,
 									depth: 0.2,
-									minSpeed: 0.04, // Control the minimum rotation speed
+									minSpeed: 0.2, // Control the minimum rotation speed
 									initial: [0.06, -0.06], // Start rotating automatically
-									maxSpeed: 0.04, // Control the maximum rotation speed
+									maxSpeed: 0.2, // Control the maximum rotation speed
 									outlineMethod: 'none',
 									wheelZoom: false,
 									zoomMax: 1,
@@ -137,7 +137,7 @@ const DynamicIconCloud = () => {
 			</div>
 			<div className="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
 				<Link
-					href="/#skills"
+					href="/about"
 					className="inline-flex items-center justify-center gap-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 pointer-events-auto"
 				>
 					Know more
