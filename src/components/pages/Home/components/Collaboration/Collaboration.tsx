@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import DynamicIconCloud from '../DynamicIconCloud/DynamicIconCloud';
 import Together from './Together/Together';
 import {FeatureCards} from './FeatureCards/FeatureCards';
-import {AnimateList} from './AnimateList/AnimateList';
+import {MarqueeDemoVertical} from './ReviewCard/ReviewCard';
 const Video = dynamic(() => import('./Video/Video'), {
 	ssr: false,
 });
@@ -14,7 +14,7 @@ const Collaboration = () => {
 			<Video />
 			{/* video End*/}
 			{/* Animated Listed Start */}
-			<AnimateList />
+			<MarqueeDemoVertical />
 			{/* Animated Listed Ends */}
 			{/* Dynamic Icon Cloud */}
 			<DynamicIconCloud />
