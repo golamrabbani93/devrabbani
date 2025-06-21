@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import {contactDrawer} from '@/utils/drawer';
 import {useRef} from 'react';
 
 const Video = () => {
@@ -70,10 +70,10 @@ const Video = () => {
 				</p>
 			</div>
 			<div className="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-				<Link
-					href="/cal"
+				<span
+					onClick={() => contactDrawer()}
 					data-slot="button"
-					className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 focus-visible:ring-4 focus-visible:outline-1 aria-invalid:focus-visible:ring-0 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 has-[>svg]:px-2.5 pointer-events-auto"
+					className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 focus-visible:ring-4 focus-visible:outline-1 aria-invalid:focus-visible:ring-0 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 has-[>svg]:px-2.5 pointer-events-auto cursor-pointer"
 				>
 					Book a call
 					<svg
@@ -91,7 +91,7 @@ const Video = () => {
 						<path d="M5 12h14"></path>
 						<path d="m12 5 7 7-7 7"></path>
 					</svg>
-				</Link>
+				</span>
 			</div>
 			<div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] dark:group-hover:bg-neutral-800/10"></div>
 		</div>
