@@ -133,10 +133,15 @@ export default {
 						transform: 'rotate(360deg)',
 					},
 				},
+				gradient: {
+					to: {
+						backgroundPosition: 'var(--bg-size, 300%) 0',
+					},
+				},
 			},
 			animation: {
 				scaleIn: 'scaleIn 1s ease-out forwards',
-				fadeInUp: 'fadeInUp 1s ease-out',
+				fadeInUp: 'fadeInUp 0.5s ease-out',
 				fadeInDown: 'fadeInDown 0.5s ease-out',
 				fadeInLeft: 'fadeInLeft 0.5s ease-out',
 				fadeInRight: 'fadeInRight 0.5s ease-out',
@@ -144,6 +149,7 @@ export default {
 				'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
 				shine: 'shine 2s infinite',
 				rotate: 'rotate 8s infinite linear',
+				gradient: 'gradient 5s ease infinite',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

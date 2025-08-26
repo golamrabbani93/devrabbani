@@ -72,6 +72,9 @@ body {
 		--chart-4: 280 65% 60%;
 		--chart-5: 340 75% 55%;
 	}
+	.theme {
+		--animate-gradient: gradient 8s linear infinite;
+	}
 }
 
 @layer base {
@@ -157,4 +160,21 @@ body {
 	background: linear-gradient(90deg, #d4ddec 10%, #fff 45% 55%, #d4ddec 90%);
 	height: 20%;
 	width: 100%;
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+@theme inline {
+	@keyframes gradient {
+		to {
+			background-position: var(--bg-size, 300%) 0;
+		}
+	}
 }
