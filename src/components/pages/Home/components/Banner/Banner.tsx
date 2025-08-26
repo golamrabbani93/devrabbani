@@ -1,4 +1,7 @@
+import {AnimatedGradientText} from '@/components/magicui/animated-gradient-text';
+import {cn} from '@/lib/utils';
 import {contactDrawer} from '@/utils/drawer';
+import {ChevronRight} from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,34 +13,34 @@ const Banner = () => {
 			className="relative min-h-screen w-full overflow-hidden bg-cover bg-right pb-10 lg:bg-center"
 			style={bannerBG}
 		>
-			<div className="animate-fadeInUp relative z-20 mx-auto mt-32 mb-2 flex max-w-full flex-col items-center justify-center px-3 delay-200 md:mt-36 md:max-w-4xl lg:max-w-5xl">
+			<div className=" relative z-20 mx-auto mt-32 mb-2 flex max-w-full flex-col items-center justify-center px-3 delay-200 md:mt-36 md:max-w-4xl lg:max-w-5xl">
 				<Link
 					href="https://drive.google.com/file/d/1I2R7nnqgCk0HBGVPAexzEVUi1zgGYdLG/view?usp=sharing"
 					target="_blank"
 					rel="noreferrer"
-					className="group flex cursor-pointer items-center rounded-full border border-black/5 bg-neutral-200 text-sm text-white backdrop-blur-xs transition-all ease-in lg:text-base dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
+					className="group relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] animate-fadeInDown"
 				>
+					<span
+						className={cn(
+							'absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ff8000]/50 via-[#f0c]/50 to-[#ff8000]/50 bg-[length:300%_100%] p-[1.6px]',
+						)}
+						style={{
+							WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+							WebkitMaskComposite: 'destination-out',
+							mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+							maskComposite: 'subtract',
+							WebkitClipPath: 'padding-box',
+						}}
+					/>
 					<span className="mx-1 rounded-full bg-blue-700 px-1.5 text-xs leading-relaxed">New</span>
-					<div
-						className="shiny-text px-1 py-0.5 hover:text-neutral-600 hover:duration-300 dark:hover:text-neutral-400 animate-shine"
-						style={{animationDuration: '4s'}}
-					>
-						My Resume is live!
-					</div>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						strokeWidth="2"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						className="lucide lucide-chevron-right mr-1 size-4 text-neutral-100/70 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 hover:duration-300"
-					>
-						<path d="m9 18 6-6-6-6"></path>
-					</svg>
+					<hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
+					<AnimatedGradientText className="text-xs font-medium uppercase">
+						Download Resume
+					</AnimatedGradientText>
+					<ChevronRight
+						className="ml-1 size-4 stroke-neutral-500 transition-transform
+ duration-300 ease-in-out group-hover:translate-x-0.5"
+					/>
 				</Link>
 
 				<h2 className="animate-fadeInUp my-2 w-full py-px text-center text-4xl leading-snug font-semibold text-balance text-zinc-700 opacity-90 delay-400 md:text-5xl lg:text-6xl dark:text-zinc-100">
@@ -48,7 +51,6 @@ const Banner = () => {
 						digital experiences
 					</span>
 				</h2>
-
 				<h1 className="grad-white animate-fadeInUp relative z-10 mt-4 mb-7 flex flex-col items-center justify-center text-center text-xl delay-600 sm:flex-row md:text-xl lg:mt-7 lg:text-2xl">
 					<span className="grad-white flex items-center justify-center">
 						Hello, I&apos;m Golam Rabbani
@@ -67,7 +69,6 @@ const Banner = () => {
 					</span>
 					<span className="grad-white leading-relaxed">a Front-End Developer</span>
 				</h1>
-
 				<div className="animate-fadeInUp z-100 mt-4 flex flex-col items-center justify-center gap-6 delay-800 md:mt-8 md:flex-row md:gap-10">
 					<div
 						onClick={contactDrawer}
