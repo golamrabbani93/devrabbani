@@ -5,7 +5,7 @@ const TechLists = () => {
 			{[
 				// Core Web Technologies
 				{name: 'HTML', icon: 'https://cdn.simpleicons.org/html5'},
-				{name: 'CSS', icon: 'https://cdn.simpleicons.org/css3'},
+				{name: 'CSS', icon: 'https://res.cloudinary.com/dolttvkme/image/upload/css_kp9zol.png'},
 				// CSS Preprocessors
 				{name: 'SASS', icon: 'https://cdn.simpleicons.org/sass'},
 				{name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript'},
@@ -18,10 +18,10 @@ const TechLists = () => {
 				{name: 'NextJS', icon: 'https://cdn.simpleicons.org/nextdotjs/white'},
 				{name: 'Redux', icon: 'https://cdn.simpleicons.org/redux/593692'},
 				// Styling & UI Libraries
-				{name: 'Tailwind CSS', icon: 'https://cdn.simpleicons.org/tailwindcss'},
+				{name: 'Tailwind', icon: 'https://cdn.simpleicons.org/tailwindcss'},
 				{name: 'Material UI', icon: 'https://cdn.simpleicons.org/mui'},
 				{name: 'Antd', icon: 'https://cdn.simpleicons.org/antdesign'},
-				{name: 'NextUI', icon: 'https://cdn.simpleicons.org/nextui/white'},
+				{name: 'NextUI', icon: 'https://cdn.simpleicons.org/heroui/white'},
 				{name: 'DaisyUI', icon: 'https://cdn.simpleicons.org/daisyui'},
 				{name: 'Bootstrap', icon: 'https://cdn.simpleicons.org/Bootstrap'},
 				{name: 'React Bootstrap', icon: 'https://cdn.simpleicons.org/reactbootstrap'},
