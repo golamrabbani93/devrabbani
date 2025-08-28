@@ -23,7 +23,7 @@ const Projects = ({projects, more}: {projects: IProjects[]; more?: boolean}) => 
 				});
 			},
 			{
-				threshold: 0.8, // Trigger when 60% of the section is visible
+				threshold: 0.4, // Trigger when 30% of the section is visible
 			},
 		);
 
