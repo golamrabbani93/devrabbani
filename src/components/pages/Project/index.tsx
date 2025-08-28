@@ -1,10 +1,10 @@
 import Projects from '@/components/Projects/Projects';
 import BreadCrumb from './components/BreadCrumb/BreadCrumb';
-import {projectsData} from '@/data/projects';
 import Contact from '@/components/Contact/Contact';
+import {allProjects} from '@/data/AllProjects';
 
 const index = () => {
-	const data = projectsData.filter((project) => project.filter === 'dynamic');
+	const data = allProjects;
 	return (
 		<>
 			<BreadCrumb />
