@@ -1,8 +1,8 @@
 import Projects from '@/components/Projects/Projects';
-import {projectsData} from '@/data/projects';
+import {allProjects} from '@/data/AllProjects';
 
 const Project = () => {
-	const topShowingProjects = projectsData?.slice(0, 3);
+	const topShowingProjects = allProjects?.slice(0, 3);
 	return (
 		<>
 			<Projects projects={topShowingProjects} />
