@@ -8,10 +8,9 @@ export const metadata: Metadata = {
 
 const page = async ({params}: {params: Promise<{slug: string}>}) => {
 	const {slug} = await params;
-	console.log('🚀🚀 ~ page ~ slug:', slug);
 	return (
 		<>
-			<SingleProjects />
+			<SingleProjects slug={slug} />
 		</>
 	);
 };
