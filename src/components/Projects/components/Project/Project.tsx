@@ -1,10 +1,11 @@
-import {IProjects} from '@/types/projects.interface';
+import {IProject} from '@/types/projects.interface';
 import MotionFollower from '../MotionFollow/MotionFollow';
 import {motion} from 'framer-motion';
 import './Project.scss';
+import Link from 'next/link';
 interface ProjectProps {
 	id: string;
-	project: IProjects;
+	project: IProject;
 }
 const Project = ({project, id}: ProjectProps) => {
 	return (
@@ -17,11 +18,9 @@ const Project = ({project, id}: ProjectProps) => {
 			exit={{opacity: 0, scale: 0.8}}
 		>
 			<div className="flex flex-col lg:mx-10 lg:w-full">
-				<a
-					target="_blank"
-					draggable="false"
+				<Link
 					className="pointer-events-none relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl md:pointer-events-auto lg:h-[500px] lg:rounded-3xl lg:p-2"
-					href={project?.liveLink}
+					href={`/projects/${project?.name.toLowerCase()}`}
 				>
 					<div
 						className="absolute inset-x-0 top-0 h-px"
@@ -38,7 +37,7 @@ const Project = ({project, id}: ProjectProps) => {
 							}}
 						></div>
 					</div>
-				</a>
+				</Link>
 				<div className="mt-6 mb-24 flex flex-col px-2 lg:hidden">
 					<div className="flex items-center">
 						<h2 className="my-auto line-clamp-1 text-lg font-bold">{project?.name}</h2>
