@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 
-import {IProjects} from '@/types/projects.interface';
+import {IProject} from '@/types/projects.interface';
 
 interface ProjectContentProps {
-	project: IProjects;
+	project: IProject;
 }
 
 const ProjectContent = ({project}: ProjectContentProps) => {
