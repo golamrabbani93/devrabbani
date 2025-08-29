@@ -1,7 +1,8 @@
+import {IProject} from '@/types/projects.interface';
 import Content from './components/Content/Content';
-import ContentNavigation from './components/ContentNavigation/ContentNavigation';
+// import ContentNavigation from './components/ContentNavigation/ContentNavigation';
 
-const Article = () => {
+const Article = ({project}: {project: IProject}) => {
 	return (
 		<main id="nd-docs-layout" className="flex flex-1 flex-col transition-[margin] px-12">
 			<div
@@ -14,8 +15,8 @@ const Article = () => {
 				}}
 			>
 				{/* Component Content */}
-				<Content />
-				<ContentNavigation />
+				<Content project={project} />
+				{/* <ContentNavigation /> */}
 			</div>
 		</main>
 	);
