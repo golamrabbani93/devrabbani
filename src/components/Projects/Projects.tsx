@@ -4,10 +4,10 @@ import React, {useEffect, useRef, useState} from 'react';
 import TopTitle from './components/TopTitle/TopTitle';
 import Project from './components/Project/Project';
 import ProjectContent from './components/ProjectContent/ProjectContent';
-import {IProjects} from '@/types/projects.interface';
+import {IProject} from '@/types/projects.interface';
 import Link from 'next/link';
 
-const Projects = ({projects, more}: {projects: IProjects[]; more?: boolean}) => {
+const Projects = ({projects, more}: {projects: IProject[]; more?: boolean}) => {
 	const [activeSection, setActiveSection] = useState<string>(projects[0].id);
 
 	// Create refs dynamically for each project
@@ -63,7 +63,7 @@ const Projects = ({projects, more}: {projects: IProjects[]; more?: boolean}) => 
 								data-id={project.id}
 							>
 								<>
-									<Project project={project as IProjects} id={project.id} />
+									<Project project={project as IProject} id={project.id} />
 								</>
 							</div>
 						))}
@@ -73,7 +73,7 @@ const Projects = ({projects, more}: {projects: IProjects[]; more?: boolean}) => 
 					<div className="hidden py-4 lg:sticky lg:block lg:w-[35%]">
 						<div className="sticky top-36 space-y-8 transition-all duration-300">
 							<ProjectContent
-								project={projects.find((project) => project.id === activeSection) as IProjects}
+								project={projects.find((project) => project.id === activeSection) as IProject}
 								// content={
 								// 	projectsData.find((project) => project.id === activeSection)?.content || ''
 								// }
