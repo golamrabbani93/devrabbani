@@ -1,0 +1,32 @@
+.item {
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	background-size: cover;
+	background-position: top;
+	transition: background-position 10s;
+	&:hover {
+		background-position: bottom;
+	}
+	&:hover img {
+		transform: scale(1.3);
+	}
+	&:hover .item--text .text-inner {
+		top: 68%;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		transition: 1.2s;
+		display: block;
+	}
+	&::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+}
