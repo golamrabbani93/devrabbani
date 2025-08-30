@@ -44,6 +44,7 @@ export interface IProject {
 	liveLink: string;
 	features: string[];
 	githubClientLink: string;
+	githubServerLink?: string;
 	highLightTech: IHighLightTech[];
 	description: string;
 	descriptions: IDescriptions;
