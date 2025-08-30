@@ -37,7 +37,7 @@ export interface IKeyFeatures {
 }
 export interface IProject {
 	id: string;
-	_id: string;
+	_id?: string;
 	name: string;
 	fullPhoto: string;
 	images: string[];
@@ -49,7 +49,7 @@ export interface IProject {
 	descriptions: IDescriptions;
 	Challenges: IChallenges;
 	keyFeatures: IKeyFeatures[];
-	color: string;
+	color?: string;
 	technologies: ITech[];
 	isDeleted: boolean;
 	adminEmail?: string;
