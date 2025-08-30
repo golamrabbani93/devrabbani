@@ -36,7 +36,7 @@ export function Modal() {
 					className="bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md [&_[cmdk-group-heading]]:text-muted-foreground **:data-[slot=command-input-wrapper]:h-12 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group]]:px-2 [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5"
 					cmdk-root=""
 				>
-					<label
+					{/* <label
 						style={{
 							position: 'absolute',
 							width: '1px',
@@ -82,7 +82,7 @@ export function Modal() {
 							aria-controls=":r29:"
 							aria-labelledby=":r2a:"
 						/>
-					</div>
+					</div> */}
 					<div
 						data-slot="command-list"
 						className="max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto max-sm:max-h-[400px]"
@@ -206,12 +206,12 @@ export function Modal() {
 							</Link>
 						</div>
 						<span>
-							<span className="md:hidden">Scroll</span>{' '}
-							<kbd className="bg-muted rounded px-1 text-xs">↑↓</kbd> to navigate
-							<span className="mx-2 hidden opacity-50 md:inline">|</span>
+							{/* <span className="md:hidden">Scroll</span>{' '} */}
+							<kbd className="bg-muted rounded px-1 text-xs">devrabbani9@gmail.com</kbd>
+							{/* <span className="mx-2 hidden opacity-50 md:inline">|</span>
 							<span className="hidden md:inline">
 								Press <kbd className="bg-muted rounded px-1 text-xs">↵</kbd> to open
-							</span>
+							</span> */}
 						</span>
 					</div>
 				</div>

@@ -117,88 +117,88 @@ const Navigations = () => {
 			description: 'Thoughts, mental models, and tutorials',
 			active: pathname === '/blog',
 		},
-		{
-			id: 'guestbook',
-			pathname: '#',
-			icon: (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					strokeWidth="2"
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					className={`lucide lucide-message-square size-5 text-neutral-200 ${
-						pathname === '/guestbook' ? 'text-white' : 'group-hover:text-black'
-					}`}
-				>
-					<path d="M16 8.2A2.22 2.22 0 0 0 13.8 6c-.8 0-1.4.3-1.8.9-.4-.6-1-.9-1.8-.9A2.22 2.22 0 0 0 8 8.2c0 .6.3 1.2.7 1.6A226.652 226.652 0 0 0 12 13a404 404 0 0 0 3.3-3.1 2.413 2.413 0 0 0 .7-1.7"></path>
-					<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path>
-				</svg>
-			),
-			title: 'Guestbook',
-			description: 'Leave a message for me',
-			active: pathname === '/guestbook',
-		},
-		{
-			id: 'links',
-			pathname: '#',
-			icon: (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					strokeWidth="2"
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					className={`lucide lucide-link size-5 text-neutral-200 ${
-						pathname === '/links' ? 'text-white' : 'group-hover:text-black'
-					}`}
-				>
-					<path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
-					<path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
-					<line x1="8" x2="16" y1="12" y2="12"></line>
-				</svg>
-			),
-			title: 'Links',
-			description: 'All my links are here',
-			active: pathname === '/links',
-		},
+		// {
+		// 	id: 'guestbook',
+		// 	pathname: '#',
+		// 	icon: (
+		// 		<svg
+		// 			xmlns="http://www.w3.org/2000/svg"
+		// 			width="24"
+		// 			height="24"
+		// 			viewBox="0 0 24 24"
+		// 			fill="none"
+		// 			stroke="currentColor"
+		// 			strokeWidth="2"
+		// 			strokeLinecap="round"
+		// 			strokeLinejoin="round"
+		// 			className={`lucide lucide-message-square size-5 text-neutral-200 ${
+		// 				pathname === '/guestbook' ? 'text-white' : 'group-hover:text-black'
+		// 			}`}
+		// 		>
+		// 			<path d="M16 8.2A2.22 2.22 0 0 0 13.8 6c-.8 0-1.4.3-1.8.9-.4-.6-1-.9-1.8-.9A2.22 2.22 0 0 0 8 8.2c0 .6.3 1.2.7 1.6A226.652 226.652 0 0 0 12 13a404 404 0 0 0 3.3-3.1 2.413 2.413 0 0 0 .7-1.7"></path>
+		// 			<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path>
+		// 		</svg>
+		// 	),
+		// 	title: 'Guestbook',
+		// 	description: 'Leave a message for me',
+		// 	active: pathname === '/guestbook',
+		// },
+		// {
+		// 	id: 'links',
+		// 	pathname: '#',
+		// 	icon: (
+		// 		<svg
+		// 			xmlns="http://www.w3.org/2000/svg"
+		// 			width="24"
+		// 			height="24"
+		// 			viewBox="0 0 24 24"
+		// 			fill="none"
+		// 			stroke="currentColor"
+		// 			strokeWidth="2"
+		// 			strokeLinecap="round"
+		// 			strokeLinejoin="round"
+		// 			className={`lucide lucide-link size-5 text-neutral-200 ${
+		// 				pathname === '/links' ? 'text-white' : 'group-hover:text-black'
+		// 			}`}
+		// 		>
+		// 			<path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+		// 			<path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+		// 			<line x1="8" x2="16" y1="12" y2="12"></line>
+		// 		</svg>
+		// 	),
+		// 	title: 'Links',
+		// 	description: 'All my links are here',
+		// 	active: pathname === '/links',
+		// },
 
-		{
-			id: 'bucket-list',
-			pathname: '#',
-			icon: (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					strokeWidth="2"
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					className={`lucide lucide-award size-5 text-neutral-200 ${
-						pathname === '/bucket-list' ? 'text-white' : 'group-hover:text-black'
-					}`}
-				>
-					<rect x="3" y="5" width="6" height="6" rx="1"></rect>
-					<path d="m3 17 2 2 4-4"></path>
-					<path d="M13 6h8"></path>
-					<path d="M13 12h8"></path>
-					<path d="M13 18h8"></path>
-				</svg>
-			),
-			title: 'Bucket List',
-			description: 'Things to do at least once in my life',
-		},
+		// {
+		// 	id: 'bucket-list',
+		// 	pathname: '#',
+		// 	icon: (
+		// 		<svg
+		// 			xmlns="http://www.w3.org/2000/svg"
+		// 			width="24"
+		// 			height="24"
+		// 			viewBox="0 0 24 24"
+		// 			fill="none"
+		// 			stroke="currentColor"
+		// 			strokeWidth="2"
+		// 			strokeLinecap="round"
+		// 			strokeLinejoin="round"
+		// 			className={`lucide lucide-award size-5 text-neutral-200 ${
+		// 				pathname === '/bucket-list' ? 'text-white' : 'group-hover:text-black'
+		// 			}`}
+		// 		>
+		// 			<rect x="3" y="5" width="6" height="6" rx="1"></rect>
+		// 			<path d="m3 17 2 2 4-4"></path>
+		// 			<path d="M13 6h8"></path>
+		// 			<path d="M13 12h8"></path>
+		// 			<path d="M13 18h8"></path>
+		// 		</svg>
+		// 	),
+		// 	title: 'Bucket List',
+		// 	description: 'Things to do at least once in my life',
+		// },
 	];
 
 	return (

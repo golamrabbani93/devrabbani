@@ -3,9 +3,13 @@ import Article from './components/Article/Article';
 import BreadCrumb from './components/BreadCrumb/BreadCrumb';
 import Header from './components/Header/Header';
 import {IBlogData} from '@/types/blogs.interface';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 const index = ({slug}: {slug: string}) => {
 	const data = blogData.find((post) => post?.href?.split('/').slice(2)[0] === slug);
+	if (!data) {
+		return <NotFoundPage />;
+	}
 	return (
 		<>
 			<BreadCrumb />

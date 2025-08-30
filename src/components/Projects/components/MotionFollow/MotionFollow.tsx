@@ -70,7 +70,7 @@ const MotionFollower = ({id}: {id: string}) => {
 				scale: isVisible ? 1 : 0.5,
 			}}
 			transition={{type: 'tween', duration: 0.15}}
-			className="custom-cursor pointer-events-none fixed top-[150px] left-[266px] z-50 flex items-center justify-center rounded-full border border-white/25 backdrop-blur-sm w-[100px] h-[100px] transform -translate-x-12 -translate-y-[58px] bg-white/10"
+			className="hidden custom-cursor pointer-events-none fixed top-[150px] left-[266px] z-50 md:flex items-center justify-center rounded-full border border-white/25 backdrop-blur-sm w-[100px] h-[100px] transform -translate-x-12 -translate-y-[58px] bg-white/10"
 		>
 			<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
 				<div className="relative rounded-full p-1.5 leading-none font-medium animate-rotate">
