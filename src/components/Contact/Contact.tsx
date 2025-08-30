@@ -9,7 +9,7 @@ const Contact = () => {
 			<div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-y-2 py-10 text-center lg:mx-0">
 				<div
 					draggable="false"
-					className="absolute top-1/2 left-1/2 z-50 -translate-y-1/2 translate-x-[130px] cursor-grab overflow-hidden rounded-full md:-translate-y-[230px] lg:-translate-y-[70px] lg:translate-x-[280px]"
+					className="absolute top-1/2 left-1/2 z-50 -translate-y-1/2 translate-x-[110px] sm:translate-x-[130px] cursor-grab overflow-hidden rounded-full md:-translate-y-[230px] lg:-translate-y-[70px] lg:translate-x-[280px]"
 					style={{
 						WebkitTouchCallout: 'none',
 						WebkitUserSelect: 'none',
@@ -25,7 +25,7 @@ const Contact = () => {
 				<div className="relative">
 					<TopImage />
 				</div>
-				<span className="mt-4 text-2xl font-light tracking-wide text-white sm:text-4xl lg:text-5xl">
+				<span className="mt-4 text-xl font-light tracking-wide text-white  sm:text-4xl lg:text-5xl">
 					<motion.h3
 						className="text-nowrap"
 						initial={{opacity: 0, transform: 'translateX(-300px)'}}
