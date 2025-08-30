@@ -4,7 +4,7 @@ const Internship = () => {
 	return (
 		<div className="mt-2 flex flex-col items-start gap-y-2 text-sm font-light">
 			<span className="text-muted-foreground font-normal tracking-wide uppercase">
-				DEC 2024 - MAR 2025
+				DEC 2024 - MAY 2025
 			</span>
 			<p className="text-xl font-semibold text-white/90 md:text-2xl">Frontend Developer Intern</p>
 			<a

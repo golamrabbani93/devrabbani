@@ -1,9 +1,6 @@
 const Rotate = () => {
 	return (
-		<div
-			className="relative rounded-full bg-blue-700 p-1.5 leading-none font-medium"
-			style={{transform: 'rotate(283.86deg)'}}
-		>
+		<div className="relative rounded-full bg-blue-700 p-1.5 leading-none font-medium">
 			<div className="animate-rotate relative size-[95px] rounded-full bg-black p-2">
 				<div className="absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black">
 					<svg

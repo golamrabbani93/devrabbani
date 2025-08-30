@@ -45,8 +45,7 @@ const Banner = () => {
 
 				<h2 className="animate-fadeInUp my-2 w-full py-px text-center text-4xl leading-snug font-semibold text-balance text-zinc-700 opacity-90 delay-400 md:text-5xl lg:text-6xl dark:text-zinc-100">
 					<span className="md:text-nowrap md:leading-tight">I help founders turn ideas</span>
-					<br className="hidden md:block" />
-					into seamless
+					<br className="hidden md:block" /> into seamless
 					<span className="font-nyght bg-gradient-to-bl from-zinc-700 via-zinc-200 to-zinc-50 bg-clip-text font-light tracking-wide text-transparent ml-4 ">
 						digital experiences
 					</span>
