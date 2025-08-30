@@ -1,6 +1,7 @@
 import Header from './Header';
 import Details from './Details';
 import {IProject} from '@/types/projects.interface';
+import Footer from './Footer';
 
 const Content = ({project}: {project: IProject}) => {
 	return (
@@ -8,6 +9,7 @@ const Content = ({project}: {project: IProject}) => {
 			{/* HEADER */}
 			<Header project={project} />
 			<Details project={project} />
+			<Footer project={project} />
 		</article>
 	);
 };
