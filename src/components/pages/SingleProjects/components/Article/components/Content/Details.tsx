@@ -1,7 +1,6 @@
 import {IProject} from '@/types/projects.interface';
 import Challenge from './Challenge';
 import Features from './Features';
-import Footer from './Footer';
 import Overview from './Overview';
 import TechStack from './TechStack';
 import Outcome from './Outcome';
@@ -42,7 +41,6 @@ const Details = ({project}: {project: IProject}) => {
 			<Challenge challenge={project?.Challenges} />
 			<hr className="mt-5" />
 			<Outcome Outcome={project?.descriptions?.outcome} />
-			<Footer />
 		</div>
 	);
 };
