@@ -6,7 +6,6 @@ import Overview from './Overview';
 import TechStack from './TechStack';
 import Outcome from './Outcome';
 import './Content.scss';
-/* eslint-disable @next/next/no-img-element */
 const Details = ({project}: {project: IProject}) => {
 	return (
 		<div className="prose">
