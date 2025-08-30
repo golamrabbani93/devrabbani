@@ -4,7 +4,7 @@ import Content from './components/Content/Content';
 
 const Article = ({project}: {project: IProject}) => {
 	return (
-		<main id="nd-docs-layout" className="flex flex-1 flex-col transition-[margin] px-12">
+		<main id="nd-docs-layout" className="flex flex-1 flex-col transition-[margin] md:px-12">
 			<div
 				id="nd-page"
 				className="flex flex-1 mx-auto w-full"
